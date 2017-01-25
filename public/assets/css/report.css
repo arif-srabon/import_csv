@@ -1,0 +1,54 @@
+td, th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333
+}
+#divAjaxLoading {
+	background: url("../images/ajax_loader.gif") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	color: #FF0000;
+	font-weight: bold;
+	height: 100px;
+	padding: 25px 0 0 110px;
+}
+.rpt-table {
+	border: none;
+}
+.rpt-table th {
+	font-weight: bold;
+	border-bottom: 1px #000000 solid;
+	border-top: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	vertical-align: middle;
+	text-align: center;
+}
+.rpt-table .subheading {
+ 	text-align: center;
+	font-weight: bold;
+	border-bottom: 1px #000000 solid;
+	border-top: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+}
+.rpt-table tr, .rpt-table td {
+	margin: 0;
+	border-bottom: 1px #000000 solid;
+	border-left: 1px #000000 solid;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+.rpt-table .last {
+	border-right: 1px #000000 solid;
+}
+.rpt-table1 tr, .rpt-table1 td {
+	margin: 0;
+	font-size: 16px;
+}
+.head-rpt, .head-rpt tr, .head-rpt td {
+	border: 1px #000000 solid;
+}
+.rpt-table .top {
+	border-top: 1px #000000 solid;
+}
+
+.rpt-table > tbody > tr:nth-of-type(odd) {
+  background-color: #fcfcfc;
+}

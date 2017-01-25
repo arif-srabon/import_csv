@@ -1,0 +1,145 @@
+/**
+ * Color Themes : Green
+ */
+
+.sidebar {
+  background-color: #464056;
+}
+.navbar-inverse {
+  background-color: #443e53;
+}
+.navigation > li.active > a,
+.navigation > li.active > a:active,
+.navigation > li.active > a:focus {
+  background-color: #443e53;
+}
+.page-title {
+  padding: 10px 36px 10px 0;
+}
+.page-title h4 {
+  font-size: 25px;
+}
+.page-title h4 .text-semibold {
+  font-weight: bold;
+}
+.page-title [class^="icon-"] {
+  border: 1px solid #333;
+  color: #333;
+  border-radius: 50%;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+}
+.page-title [class^="icon-"]:before {
+  vertical-align: middle;
+}
+@media (min-width: 769px) {
+  .sidebar-xs .sidebar-main .navigation-main > li > a > span {
+    background-color: #443e53;
+    border-color: #443e53;
+  }
+  .sidebar-xs .sidebar-main .navigation-main > li > ul {
+    background-color: #2c2836;
+  }
+}
+.bg-info {
+  background-color: #5c5470;
+  border-color: #443e53;
+}
+.btn-primary,
+.btn-info {
+  background-color: #5c5470;
+  border-color: #443e53;
+}
+.btn-primary.focus,
+.btn-info.focus,
+.btn-primary:focus,
+.btn-info:focus,
+.btn-primary:hover,
+.btn-info:hover {
+  background-color: #554d67;
+  border-color: #4b455c;
+}
+.btn-primary:active,
+.btn-info:active,
+.btn-primary:active,
+.btn-info:active,
+.btn-primary.active,
+.btn-info.active,
+.btn-primary.active,
+.btn-info.active,
+.btn-primary .open > .dropdown-toggle.btn-info,
+.btn-info .open > .dropdown-toggle.btn-info {
+  background-color: #554d67;
+  border-color: #4b455c;
+}
+.btn-primary:active:hover,
+.btn-info:active:hover,
+.btn-primary:active:hover,
+.btn-info:active:hover,
+.btn-primary.active:hover,
+.btn-info.active:hover,
+.btn-primary.active:hover,
+.btn-info.active:hover,
+.btn-primary .open > .dropdown-toggle.btn-info:hover,
+.btn-info .open > .dropdown-toggle.btn-info:hover,
+.btn-primary .open > .dropdown-toggle.btn-primary:hover,
+.btn-info .open > .dropdown-toggle.btn-primary:hover,
+.btn-primary:active:focus,
+.btn-info:active:focus,
+.btn-primary:active:focus,
+.btn-info:active:focus,
+.btn-primary.active:focus,
+.btn-info.active:focus,
+.btn-primary.active:focus,
+.btn-info.active:focus,
+.btn-primary .open > .dropdown-toggle.btn-info:focus,
+.btn-info .open > .dropdown-toggle.btn-info:focus,
+.btn-primary:active.focus,
+.btn-info:active.focus,
+.btn-primary:active.focus,
+.btn-info:active.focus,
+.btn-primary.active.focus,
+.btn-info.active.focus,
+.btn-primary.active.focus,
+.btn-info.active.focus,
+.btn-primary .open > .dropdown-toggle.btn-info.focus,
+.btn-info .open > .dropdown-toggle.btn-info.focus,
+.btn-primary .open > .dropdown-toggle.btn-primary.focus,
+.btn-info .open > .dropdown-toggle.btn-primary.focus {
+  background-color: #554d67;
+  border-color: #4b455c;
+}
+/** Old Age **/
+.program-1 .panel-heading {
+  background-color: #5c5470;
+  color: #fff;
+}
+.program-1 .beneficiary-panel-body {
+  background-color: #d2cfdb;
+}
+/** Widow **/
+.program-2 .panel-heading {
+  background-color: #5C5470;
+  color: #fff;
+}
+.program-2 .beneficiary-panel-body {
+  background-color: #d2cfdb;
+}
+/** Disable **/
+.program-3 .panel-heading {
+  background-color: #222831;
+  color: #fff;
+}
+.program-3 .beneficiary-panel-body {
+  background-color: #8a99ae;
+}
+.bg-teal-400 {
+  background-color: #5c5470;
+  border-color: #5c5470;
+}
+.bg-teal-800 {
+  background-color: #2c2836;
+  border-color: #2c2836;
+}

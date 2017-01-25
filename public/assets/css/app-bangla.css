@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+/**
+ * SITE STYLES
+ *
+ * Bengali stylesheet for Bengali locale only.
+ *
+ * @locale      bn_BD
+ *
+ * @package 	adr-dgda
+ * @author 		Mayeenul Islam
+ */
+
+@font-face {
+	font-family: 'Siyam Rupali';
+	src: url('../fonts/SiyamRupali.eot?version=1.070');
+	src: local('Siyam Rupali'), url('../fonts/SiyamRupali.woff?version=1.070') format('woff'),   url('../fonts/SiyamRupali.ttf?version=1.070') format('truetype');
+	font-style: normal;
+}
+
+body{
+	font-family: 'Siyam Rupali', 'Solaimanlipi', Vrinda, sans-serif;
+	font-size: 15px;
+}
+
+.page-title{
+	font-size: 24px;
+}

@@ -1,0 +1,888 @@
+/**
+ * Site Styles
+ *
+ * @package 	adr-dgda
+ * @author  	Mayeenul Islam
+ */
+
+// ----------------------
+// GLOBAL CSS
+// ----------------------
+
+body{
+	background-color: #f2f2f2;
+	color: $black-color;
+}
+
+a{
+	color: $link-color;
+}
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+
+// ----------------------
+// COMMON CSS
+// ----------------------
+
+.site-container{
+	//margin-top: 10px;
+	//margin-bottom: 10px;
+}
+
+.mobile-container{
+	padding-top: 20px;
+}
+
+.content-wrapper{
+	max-width: 1200px;
+}
+
+.btn.btn-with-icon{
+	.fa{
+		margin-right: 5px;
+	}
+}
+
+
+// ----------------------
+// TOP BAR
+// ----------------------
+
+#top-bar{
+	background-color: $black-color;
+	color: #fff;
+	font-size: 16px;
+
+	.container-fluid{
+		padding-left: 0;
+	}
+	
+	.nav-pills > li > a{
+		color: #ccc;
+
+		&:hover,
+		&:focus{
+			background-color: rgba(0,0,0,0.2);
+		}
+	}
+
+	.fa{
+		margin-right: 5px;
+	}
+
+	&.affix{
+		display: block;
+		left: 0;
+		right: 0;
+		z-index: 9999;
+	}
+}
+
+
+// ----------------------
+// NEWS BAR
+// ----------------------
+
+#news-label,
+#news-feed{
+	float: left;
+	display: inline-block;
+}
+
+#news-label{
+	font-weight: 700;
+	width: 85px;
+
+	a{
+		$news-bg-color: #ce211b;
+		background-color: $news-bg-color;
+		color: #fff;
+		padding: 10px;
+		display: block;
+
+		&:hover{
+			background-color: darken($news-bg-color, 10%);
+			text-decoration: none;
+		}
+	}
+}
+
+#news-feed{
+	padding: 10px;
+
+	ul{
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	a{
+		color: #fff;
+
+		&:hover{
+			color: darken(#fff, 10%);
+			text-decoration: none;
+		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.top-bar-news{
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		display: block;
+		z-index: 999;
+		background-color: rgba(0,0,0,0.85);
+
+		#news-feed{
+			width: 75%;
+		}
+	}
+}
+
+#user-nav{
+	.nav-pills > li{
+		float: none;
+		display: inline-block;
+	}
+}
+
+.user-image{
+	border-radius: 100%;
+}
+
+
+// ----------------------
+// HEADER SECTION
+// ----------------------
+
+#site-header{
+	$start: #fff; //old: #2c3e50
+	$stop:  #e1e1e1; //old: #34495e
+	@include gradient-directional( $start, $stop, 180deg );
+	border-bottom: 1px solid #e1e1e1;
+	box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 768px) {
+	#site-header{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+}
+
+.navbar-brand{
+	padding: 5px 5px 5px 0;
+	height: auto;
+	position: relative;
+
+	& > img{
+		display: inline-block;
+	}
+}
+
+#site-logo{
+	height: 60px;
+	float: left;
+}
+
+.navbar-branding{
+	display: inline-block;
+    float: left;
+    margin-left: 10px;
+}
+
+.site-title,
+.site-description{
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+}
+
+.site-title{
+	font-size: 20px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 7px;
+}
+
+.site-description{
+	font-size: 16px;
+}
+
+#main-nav{
+	margin-bottom: 0;
+
+	.navbar-nav > li > a{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.navbar-nav>.active>a,
+	.navbar-nav>.active>a:focus,
+	.navbar-nav>.active>a:hover {
+	    color: #555;
+	    background-color: #e1e1e1;
+	    border-radius: 3px;
+	}
+
+	.nav > li > a:hover,
+	.nav > li > a:focus{
+	    border-radius: 3px;
+	}
+
+	.navbar-form{
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+
+	.navbar-toggle{
+		margin-top: 17px;
+		margin-bottom: 17px;
+		border-color: #ddd;
+
+		&:hover,
+		&:focus{
+			background-color: #ddd;
+		}
+
+		.icon-bar{
+			background-color: #888
+		}
+	}
+}
+
+@media (min-width: 768px) {
+
+	#main-menu-collapse{
+		padding-left: 0;
+		padding-right: 0;
+		margin-top: 15px;
+		//margin-bottom: 10px;
+	}
+
+}
+
+// ----------------------
+// FRONT PAGE
+// ----------------------
+
+.front-page-sections{
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.fps-min-padding{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.section-head{
+	margin-top: 0;
+	font-weight: 700;
+}
+
+
+
+// ----------------------
+// HERO SECTION
+// ----------------------
+
+#hero{
+	$start: $base-color; //old: #2c3e50
+	$stop:  $secondary-color; //old: #34495e
+	@include gradient-directional( $start, $stop, 45deg );
+	color: #fff;
+
+	h2{
+		font-weight: 700;
+	}
+
+	p{
+		margin-bottom: 20px;
+	}
+}
+
+#adr-checker{
+	padding: 30px;
+	background-color: rgba(0,0,0,0.2);
+	border: 5px solid rgba(0,0,0,0.15);
+	$radius: 5px;
+	@include border-top-radius($radius);
+	@include border-right-radius($radius);
+	@include border-bottom-radius($radius);
+	@include border-left-radius($radius);
+
+	h3{
+		margin-top: 0;
+	}
+
+	p{
+		color: #999;
+		margin-bottom: 20px;
+	}
+
+	#medicine-unique-id{
+		border-width: 0;
+		border-bottom: 1px solid rgba(47,66,85,0.7);
+		padding: 10px;
+		height: auto;
+		background-color: rgba(0,0,0,0.3);
+		color: #fff;
+		box-shadow: 0 0 0 transparent;
+
+		[placeholder] {
+			color: #666;
+		}
+	}
+}
+
+#fake-checker-result{
+	margin-top: 10px;
+	font-size: 20px;
+}
+
+.fake-result{
+	padding: 10px;
+	border-radius: 4px;
+	
+	.fa{
+		font-size: 25px;
+	}
+
+	small{
+		font-size: 14px;
+	}
+}
+
+.result-medicine-fake{
+	background-color: $red-color;
+	color: #fff;
+}
+
+.result-medicine-real{
+	background-color: #4dae71;
+	color: #fff;
+}
+
+
+// ----------------------
+// BOXES SECTION
+// ----------------------
+
+#boxes{
+	//background-color: #e1e1e1;
+}
+
+.box-head{
+	margin-top: 20px;
+	font-weight: 700;
+}
+
+.front-box{
+	background-color: lighten($base-color, 10%);
+	color: #ededed;
+	margin-bottom: 20px;
+    padding: 30px;
+    $radius: 5px;
+	@include border-top-radius($radius);
+	@include border-right-radius($radius);
+	@include border-bottom-radius($radius);
+	@include border-left-radius($radius);
+
+	p{
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+}
+
+@media (min-width: 768px) {
+	.front-box{
+		margin-bottom: 0;
+	}
+}
+
+.box-icon{
+	font-size: 70px;
+	color: #fff;
+}
+
+.btn-around{
+	border: 1px solid #fff;
+	color: #fff;
+
+	&:hover{
+		color: darken(#fff, 10%);
+		border-color: #ccc;
+	}
+}
+
+
+// ----------------------
+// FOOTER SECTION
+// ----------------------
+
+#site-footer{
+	background-color: $black-color;
+	color: #ededed;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	font-size: 14px;
+
+	a{
+		color: #fff;
+	}
+}
+
+.footer-col{
+	margin-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+	.footer-col{
+		text-align: left;
+		margin-bottom: 0;
+	}
+
+	.footer-col-right{
+		text-align: right;
+	}
+}
+
+@media (max-width: 768px) {
+	.footer-col-right{
+		margin-bottom: 20px;
+	}
+}
+
+
+
+// ----------------------
+// BREADCRUMB
+// ----------------------
+
+#breadcrumbs{
+	margin-top: 10px;
+
+	.breadcrumb{
+		padding-left: 0;
+		font-size: 14px;
+		background-color: transparent;
+	}
+}
+
+
+// ----------------------
+// PAGE
+// ----------------------
+
+.page-title{
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 0;
+	margin-bottom: 5px;
+	color: $base-color;
+}
+
+.article-header{
+	border-bottom: 3px solid $base-color;
+	margin-bottom: 30px;
+}
+
+.entry-content{
+	margin-bottom: 20px;
+}
+
+.page-content{
+	margin-bottom: 30px;
+}
+
+
+
+// ----------------------
+// PAGE: Medicine
+// PAGE: Companies
+// PAGE: News (initial)
+// ----------------------
+
+.widget,
+.news-card,
+.company-card,
+.medicine-card{
+	background-color: #f8f8f8;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	padding: 10px;
+	margin-bottom: 20px;
+	border-top: 3px solid $base-color;
+}
+
+.news-card,
+.company-card{
+	padding: 20px;
+}
+
+@media (max-width: 380px) {
+	.medicine-card-holder{
+		clear: both;
+		width: 100%;
+	}
+}
+
+@media (min-width: 769px) {
+	.first-col-on-three{
+		clear: both;
+	}	
+}
+
+@media (max-width: 768px) {
+	.first-col-on-two{
+		clear: both;
+	}
+}
+
+.medicine-image{
+	width: 100%;
+	height: auto;
+	margin-bottom: 20px;
+	border: 1px solid #ededed;
+}
+
+.company-code,
+.medicine-code{
+	color: #999;
+	font-size: 14px;
+}
+
+.company-name,
+.medicine-name{
+	margin-top: 10px;
+	margin-bottom: 0;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.company-name span.label{
+	font-size: 11px;
+	vertical-align: middle;
+}
+
+.medicine-manufacturer,
+.medicine-price{
+	color: #666;
+}
+
+.medicine-price{
+	font-size: 14px;
+}
+
+.company-address{
+	margin-top: 10px;
+}
+
+// Search
+#form-search-companies,
+#form-search-medicines{
+	position: relative;
+	margin-bottom: 3px;
+}
+
+.search-submit{
+	position: absolute;
+	right: 0;
+	top: 0;
+	border: 0;
+	background-color: transparent;
+	font-size: 20px;
+	padding: 0 10px 6px;
+}
+
+
+// ----------------------
+// PAGE: News
+// ----------------------
+
+.news-type{
+	color: $red-color;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.entry-meta{
+	font-size: 14px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	padding-top: 3px;
+	padding-bottom: 3px;
+	color: #666;
+}
+
+.news-card{
+	.entry-title{
+		margin-top: 0;
+		font-weight: bold;
+	}
+}
+
+.first-col-news{
+	clear: both;
+}
+
+@media (max-width: 767px) {
+	.news-card-holder{
+		clear: both;
+		width: 100%;
+	}
+}
+
+.news-detail{
+	.entry-content{
+		img{
+			margin: 10px;
+		}
+	}
+}
+
+
+// ----------------------
+// PAGE: ADR
+// ----------------------
+
+.step-heading{
+	font-weight: bold;
+	margin-top: 0
+}
+
+.step-body .panel-head{
+	font-size: 18px;
+	margin: 0;
+	font-weight: bold;
+}
+
+.add-other-medicine,
+.add-three-months-medicine{
+	margin-top: 10px;
+}
+
+.three-months-repeater{
+	margin-bottom: 10px;
+}
+
+.table.table-borderless{
+	& > thead > tr > th,
+	& > thead > tr > td,
+	& > tbody > tr > th,
+	& > tbody > tr > td,
+	& > tfoot > tr > th,
+	& > tfoot > tr > td{
+		border-top-width: 0;
+	}
+}
+
+// ----------------------
+// Widget
+// ----------------------
+
+.widget{
+	padding: 0;
+	border-top-width: 0;
+
+	ul{
+		padding-left: 17px;
+	}
+}
+
+.widget-content{
+	padding: 5px 20px 20px;
+}
+
+.widget-title{
+	margin-top: 0;
+	padding: 10px 20px;
+	background-color: $base-color;
+	color: #fff;
+	font-size: 20px;
+}
+
+.widget-inner-title{
+	color: $base-color;
+	font-weight: bold;
+}
+
+
+// ----------------------
+// LOGIN/REGISTRATION
+// ----------------------
+
+.login-container{
+	padding: 5% 0;
+}
+
+body.login-registration{
+	background-image: url('../images/medical-background.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+
+	#site-logo{
+		float: none;
+	}
+
+	.site-title{
+		margin-bottom: 5px;
+	}
+
+	.form-control{
+		border-radius: 2px;
+		background-color: #f8f8f8;
+		padding: 10px;
+	}
+
+	input[type="text"],
+	input[type="password"],
+	input[type="email"],
+	select{
+		height: 42px;
+	}
+
+	label{
+		font-weight: normal;
+		font-size: 14px;
+	}
+
+	a{
+		color: $brand-info
+	}
+}
+
+#login-header{
+	a{
+		color: #666;
+	}
+}
+
+.login-title{
+	margin-top: 0;
+	font-weight: bold;
+}
+
+.box-header{
+	border-bottom: 1px solid #ededed;
+	margin-bottom: 30px;
+}
+
+.register-form-area,
+.login-form-area{
+	background-color: #fff;
+	padding: 30px;
+	border: 1px solid #e1e1e1;
+	box-shadow: 0 0 20px rgba(0,0,0,0.1);
+	margin: 20px auto;
+}
+
+.login-form-area{
+	width: 90%;
+	max-width: 400px;
+}
+
+.register-form-area{
+	width: 90%;
+	max-width: 600px;
+}
+
+#forgot-password{
+	margin-bottom: 20px;
+}
+
+#register-submit,
+#login-submit,
+#myprofile-submit{
+	padding: 12px 40px;
+}
+
+#login-footer{
+	font-size: 13px;
+	color: #777;
+}
+
+.login-separator{
+	margin-left: 10px;
+	margin-right: 10px;
+	color: #999;
+}
+
+.login-language-switcher{
+	border-top: 1px solid #ededed;
+	margin-bottom: 0;
+	padding-top: 15px;
+}
+
+
+
+// ----------------------
+// DatePicker CSS
+// ----------------------
+
+.datepicker{
+	&.datepicker-dropdown{
+		top: 0;
+	    left: 0;
+	    margin: 0;
+	    padding: 5px;
+	    z-index: 1200 !important;
+	}
+
+	.datepicker-days,
+	.datepicker-months,
+	.datepicker-years{
+		max-width: 300px;
+	}
+
+	table {
+	    margin: 0;
+
+	    thead tr:first-child th,
+	    tfoot tr th {
+		    cursor: pointer;
+		    padding-top: 15px;
+		    padding-bottom: 15px;
+		}
+
+		tr td.old,
+		tr td.new {
+		    color: #999999;
+		}
+
+		tr td.day:hover,
+		tr td.day:focus {
+		    background-color: #f5f5f5;
+		    cursor: pointer;
+		}
+
+		tr td span {
+		    display: block;
+		    width: 31%;
+		    padding: 7px 12px;
+		    float: left;
+		    margin: 1%;
+		    cursor: pointer;
+		    border-radius: 3px;
+		}
+	}
+
+	.table-condensed td,
+	.table-condensed th {
+	    text-align: center;
+	    padding: 7px 12px;
+	    border-radius: 3px;
+	    border: 0;
+	}
+}

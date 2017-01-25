@@ -1,0 +1,276 @@
+/**!
+ * Stylesheet for DSS Project (Common)
+ *
+ * Get the compiled files in ../css/
+ *
+ * locale: all
+ *
+ * @package MIS_DSS
+ * @author 	Mayeenul Islam
+ * ...
+ */
+/** designing / templating **/
+/* .navbar-brand{
+	height: auto;
+	max-height: 80px;
+	padding: 12px 10px;
+	font-size: 18px;
+	margin: 0;
+	
+	a{
+		color: #fff;
+	}
+	img{
+		display: inline-block;
+		float: left;
+		height: auto;
+		max-height: 50px;
+	}
+} */
+.navbar-header {
+  min-width: auto;
+}
+.navbar-brand {
+  height: auto;
+  padding: 6px 20px;
+  position: relative;
+}
+.navbar-brand .navbar-logo {
+  display: inline-block;
+  height: auto;
+  max-height: 40px;
+  margin-top: 0;
+  float: left;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+}
+/*.navbar-brand .navbar-logo:hover {
+  position: absolute;
+  width: auto;
+  max-height: 100px;
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  -o-transition: all .5s ease;
+  -ms-transition: all .5s ease;
+  transition: all .5s ease;
+  z-index: 999999;
+}*/
+.navbar-branding {
+  display: inline-block;
+  float: left;
+  margin-left: 10px;
+}
+.brand-text {
+  display: block;
+  vertical-align: middle;
+  font-size: 20px;
+  font-weight: bold;
+}
+.brand-secondary-text {
+  display: inline-block;
+}
+.collapse-label {
+  cursor: pointer;
+}
+/** Beneficiary Input Separation **/
+.beneficiary-create .beneficiary-header-image {
+  margin-bottom: 10px;
+  display: none;
+}
+.beneficiary-edit .beneficiary-header-image {
+	margin-bottom: 10px;
+}
+.beneficiary-header-image img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+/**
+ * ReColoring...................
+ * 
+ * #594057 (dull violet)
+ * #563761 (bright violet)
+ * #547980 (cyan)
+ * #5968b1 (blue)
+ * #5C5470 (dull blue)
+ * #4850b9 (dark blue)
+ * #222831 (blackish)
+ * #56132A (reddish)
+ */
+/**
+ * Chosen
+ *
+ * teal
+ * #325A4D - dark ash / lighter black
+ * #019875 - green
+ * #446CB3 - blue
+ */
+/* .sidebar{
+	background-color: darken(@base-color, 9%);
+}
+.navbar-inverse{
+	background-color: darken( @base-color, 10% );
+}
+.navigation{
+	& > li.active{
+		& > a,
+		& > a:active,
+		& > a:focus{
+			background-color: darken( @base-color, 10% );
+		}
+	}
+}
+.page-title{
+	padding: 10px 36px 10px 0;
+
+	h4{
+		font-size: 25px;
+
+		.text-semibold{
+			font-weight: bold;
+		}
+	}
+	[class^="icon-"]{
+		border: 1px solid #333;
+		color: #333;
+		border-radius: 50%;
+		padding: 10px;
+		width: 45px;
+		height: 45px;
+		text-align: center;
+
+		&:before{
+			vertical-align: middle;
+		}
+	}
+}
+@media (min-width: 769px){
+	.sidebar-xs{
+		.sidebar-main{
+			.navigation-main{
+				& > li{
+					& > a{
+						& > span{
+							background-color: darken( @base-color, 10% );
+							border-color: darken( @base-color, 10% );
+						}
+					}
+					& > ul{
+						background-color: darken( @base-color, 20% );
+					}
+				}
+			}
+		}
+	}
+}
+.bg-info{
+	background-color: @base-color;
+	border-color: darken( @base-color, 10% );
+}
+.btn-primary,
+.btn-info{
+	background-color: @base-color;
+	border-color: darken( @base-color, 10% );
+
+	&.focus,
+	&:focus,
+	&:hover{
+		background-color: darken( @base-color, 3% );
+		border-color: darken( @base-color, 7% );
+	}
+	&:active,
+	&:active,
+	&.active,
+	&.active,
+	.open > .dropdown-toggle.btn-info{
+		background-color: darken( @base-color, 3% );
+		border-color: darken( @base-color, 7% );
+	}
+	&:active:hover,
+	&:active:hover,
+	&.active:hover,
+	&.active:hover,
+	.open > .dropdown-toggle.btn-info:hover,
+	.open > .dropdown-toggle.btn-primary:hover,
+	&:active:focus,
+	&:active:focus,
+	&.active:focus,
+	&.active:focus,
+	.open > .dropdown-toggle.btn-info:focus,
+	&:active.focus,
+	&:active.focus,
+	&.active.focus,
+	&.active.focus,
+	.open > .dropdown-toggle.btn-info.focus,
+	.open > .dropdown-toggle.btn-primary.focus{
+		background-color: darken( @base-color, 3% );
+		border-color: darken( @base-color, 7% );
+	}
+}
+//Old Age
+.program-1{
+	.panel-heading{
+		background-color: @base-color;
+		color: #fff;
+	}
+	.beneficiary-panel-body{
+		background-color: lighten(@base-color, 45%);
+	}
+}
+//Widow
+.program-2{
+	.panel-heading{
+		background-color: #5C5470;
+		color: #fff;
+	}
+	.beneficiary-panel-body{
+		background-color: lighten(#5C5470, 45%);
+	}
+}
+//Disable
+.program-3{
+	.panel-heading{
+		background-color: #222831;
+		color: #fff;
+	}
+	.beneficiary-panel-body{
+		background-color: lighten(#222831, 45%);
+	}
+}
+
+.bg-teal-400{
+	background-color: @base-color;
+	border-color: @base-color;
+}
+.bg-teal-800{
+	background-color: darken( @base-color, 20% );
+	border-color: darken( @base-color, 20% );
+} */
+/** Color Themes */
+#sidebar-theme-switcher .btn {
+  padding: 0;
+  margin: 0 3px;
+}
+#sidebar-theme-switcher .btn.active {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+#sidebar-theme-switcher .color-holder {
+  margin-left: 20px;
+}
+.theme-ui-color-box {
+  display: block;
+  width: 15px;
+  height: 15px;
+  background-color: #425f64;
+  border: 1px solid #ccc;
+}
+.theme-ui-color-box.color-green {
+  background-color: #223c34;
+}
+.theme-ui-color-box.color-violet {
+  background-color: #464056;
+}

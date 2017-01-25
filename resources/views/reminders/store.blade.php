@@ -1,0 +1,1 @@
+Check your email. Go to login page. -> {{ link_to('/', 'Click Here') }}
