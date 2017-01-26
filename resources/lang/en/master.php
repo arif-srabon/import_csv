@@ -7,9 +7,9 @@
  */
 
 return [
-    'master_title' => 'Directorate General of Drug Administration (DGDA)',
-    'footer_dss' =>'Directorate General of Drug Administration (DGDA)',
-    'footer_tvl' =>'TechnoVista Ltd.',
+    'master_title' => 'Project Name',
+    'footer_dss' =>'Project Name',
+    'footer_tvl' =>'Ariful Islam',
     'footer_powered' =>'Powered By:',
 
     //language

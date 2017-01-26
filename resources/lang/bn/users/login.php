@@ -2,8 +2,8 @@
  
 return [
 	'page_title' => 'লগ ইন',
-	'department' => 'Directorate General of Drug Administration (DGDA)',
-	'vata_management_system' =>' Ministry of Health & Family Welfare ',
+	'department' => 'Title one',
+	'vata_management_system' =>' Title Two',
 	'title' => 'আপনার অ্যাকাউন্টে লগ ইন করুন',
 	'hints' => 'আপনার পরিচিতিপত্র লিখুন',
 

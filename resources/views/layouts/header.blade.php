@@ -1,10 +1,10 @@
 <div class="navbar navbar-inverse">
   <div class="navbar-header">
     <a class="navbar-brand" href="{{url('dashboard')}}">
-      <img class="navbar-logo" src="{{ asset('assets/images/logo-lat.png') }}" alt="Directorate General of Drug Administration (DGDA)">
+      <img class="navbar-logo" src="{{ asset('assets/images/srabon.jpg') }}" alt="Ariful Islam Srabon">
       <span class="navbar-branding">
         <span class="brand-text">
-         @if('bn' === Session::get('locale')) ঔষুদের বিরূপ প্রতিক্রিয়া রিপোর্টিং সিস্টেম @else Adverse Drug Reporting System (ADRS) @endif
+         @if('bn' === Session::get('locale')) Project Name Bangla @else Project Name English @endif
         </span>
         <small class="brand-secondary-text">
 

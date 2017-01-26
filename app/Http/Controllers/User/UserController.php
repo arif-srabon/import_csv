@@ -168,7 +168,12 @@ class UserController extends Controller
         \Assets::add(['plugins/forms/validation/validate.min.js',
             'plugins/forms/styling/uniform.min.js',
             'plugins/forms/selects/select2.min.js',
-            'app/user_form_validation.js'
+            'app/user_form_validation.js',
+            'plugins/ui/moment/moment.min.js',
+            'plugins/jquery.relatedselects.js',
+            'plugins/bootstrap-datetimepicker.min.js',
+            'bootstrap-datetimepicker-standalone.css',
+            'core/libraries/jquery.form.js',
         ]);
 
         // breadcrumbs
@@ -216,6 +221,7 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
         try {
+            dd($request);
             $user = $this->_registerUser($request);
             $userInfo = User::findOrFail($user->id);
             $userInfo->created_by = Session::get('sess_user_id');
@@ -389,8 +395,9 @@ class UserController extends Controller
         $cConfig = new CommonConfigModel;
         $data['designation'] = $cConfig->getAllCommonConfigList('cc_designation', $this->lang);
         $data['department'] = $cConfig->getAllCommonConfigList('cc_department', $this->lang);
-        $data['manufacturer'] = DB::table('manufacturer')->where('status', '=', 1)->lists('name', 'id');
-
+        $data['gender'] = $cConfig->getAllCommonConfigList('cc_genders', $this->lang);
+        $data['maritalstatus'] = $cConfig->getAllCommonConfigList('cc_marital_status', $this->lang);
+        $data['divisionList'] = $cConfig->getAllDivisionList('divisions', $this->lang);
         return $data;
     }
 

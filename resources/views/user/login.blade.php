@@ -62,7 +62,7 @@
                                     <div class="panel-body tvl-login-panel-body text-center">
                                         <div class="row">
                                             <div class="col-sm-3 text-center">
-                                                <img alt="People's Republic of Bangladesh Logo" src="{{ asset('assets/images/bangladesh-govt-logo.png') }}" width="70" height="70">
+                                                <img alt="Project Logo" src="{{ asset('assets/images/srabon.jpg') }}" width="70" height="70">
                                             </div>
                                             <div class="col-sm-6">
                                                 <h1 class="text-black">

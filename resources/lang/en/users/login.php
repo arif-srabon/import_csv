@@ -2,8 +2,8 @@
  
 return [
     'page_title' => ':: Log In ::',
-	'department' => 'Directorate General of Drug Administration (DGDA)',
-	'vata_management_system' =>'Ministry of Health & Family Welfare',
+	'department' => 'Title One',
+	'vata_management_system' =>'Title Two',
     'title' => 'Login to your account',
 	'hints' => 'Enter your credentials',
 	

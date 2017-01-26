@@ -19,25 +19,43 @@ class CreateUsersTable extends Migration
             $table->string('password');
 
             $table->string('full_name')->nullable();
+            $table->string('full_name_bn')->nullable();
             $table->integer('designation_id', false, true)->nullable();
+            $table->integer('department_id', false, true)->nullable();
             $table->string('official_email')->nullable();
-            $table->string('present_address', 1000)->nullable();
-            $table->string('permanent_address', 1000)->nullable();
+            $table->string('office_phone', 60)->nullable();
 
-
-            $table->integer('division_id', false, true)->nullable();
-            $table->integer('district_id', false, true)->nullable();
-            $table->integer('location_type_id', false, true)->nullable();
-            $table->integer('thana_upazila_id', false, true)->nullable();
-            $table->integer('city_corp_paurasava_id', false, true)->nullable();
-
-            $table->string('user_photo')->nullable();
+            $table->string('father_name')->nullable();
+            $table->string('mother_name')->nullable();
             $table->string('mobile', 150)->nullable();
             $table->string('national_id', 150)->nullable();
-            $table->string('office_phone', 60)->nullable();
             $table->string('home_phone', 60)->nullable();
-            $table->tinyInteger('status', false, true);
+            $table->integer('gender_id', false, true)->nullable()->unsigned();
+            $table->integer('marital_status_id', false, true)->nullable()->unsigned();
+            $table->string('blood_group', 30)->nullable();
+            $table->date('date_of_birth')->nullable();
+            $table->date('date_of_joining')->nullable();
 
+            $table->string('user_photo')->nullable();
+            $table->string('user_sign')->nullable();
+
+            $table->string('permanent_house_road')->nullable();
+            $table->string('permanent_village')->nullable();
+            $table->integer('permanent_division', false, true)->nullable();
+            $table->integer('permanent_district', false, true)->nullable();
+            $table->integer('permanent_upzilla', false, true)->nullable();
+            $table->integer('permanent_ward', false, true)->nullable();
+            $table->string('permanent_postcode', 30)->nullable();
+
+            $table->string('present_house_road')->nullable();
+            $table->string('present_village')->nullable();
+            $table->integer('present_division', false, true)->nullable();
+            $table->integer('present_district', false, true)->nullable();
+            $table->integer('present_upzilla', false, true)->nullable();
+            $table->integer('present_ward', false, true)->nullable();
+            $table->string('present_postcode', 30)->nullable();
+
+            $table->tinyInteger('status', false, true);
             $table->mediumText('permissions')->nullable();
             $table->timestamp('last_login')->nullable();
 

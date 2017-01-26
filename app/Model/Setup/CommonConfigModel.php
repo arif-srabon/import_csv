@@ -28,6 +28,24 @@ class CommonConfigModel extends Model
         return $value;
     }
 
+    public function getAllDivisionList($table_name,$lang='en'){
+        $name = "name as name";
+        $cache_file ='cache_dataList_'.$table_name;
+        if(isset($lang) && $lang !='en'){
+            $name = "name_".$lang." as name";
+            $cache_file ="cache_dataList_".$table_name."_".$lang;
+
+        }
+
+        $value = Cache::remember($cache_file, config('app_config.cache_time_limit'), function() use($table_name,$name) {
+            return DB::table($table_name)
+                ->orderBy('name', 'asc')
+                ->lists($name, 'id');
+        });
+
+        return $value;
+    }
+
     public function getAllCommonConfigDataList($table_name, $lang = 'en')
     {
         $name = "name as name";

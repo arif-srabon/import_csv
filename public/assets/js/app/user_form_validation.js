@@ -12,6 +12,9 @@ $(function() {
     $("#user_photo").change(function () {
         previewImage(this, 'preview_user_image');
     });
+    $("#user_sign").change(function () {
+        previewImage(this, 'preview_sign_image');
+    });
 
     // Default initialization
     $('.select').select2({
@@ -26,8 +29,19 @@ $(function() {
         wrapperClass: 'bg-teal-400',
         fileButtonHtml: '<i class="icon-googleplus5"></i>'
     });
+    // load comboBox value
+    $("#frm_user").relatedSelects({
+        onChangeLoad: '/permanentarea',
+        loadingMessage: 'Please wait',
+        selects: ['permanent_division', 'permanent_district', 'permanent_upzilla', 'permanent_ward']
+    });
 
-
+    // load comboBox value
+    $("#frm_user").relatedSelects({
+        onChangeLoad: '/presentarea',
+        loadingMessage: 'Please wait',
+        selects: ['present_division', 'present_district', 'present_upzilla', 'present_ward']
+    });
     // Setup validation
     // ------------------------------
     // date format validation

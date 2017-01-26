@@ -7,9 +7,9 @@
  */
 
 return [
-    'master_title' => 'ঔষধ প্রশাসন অধিদপ্তর',
-    'footer_dss' =>'ঔষধ প্রশাসন অধিদপ্তর',
-    'footer_tvl' =>'টেকনোভিসতা লিমিটেড.',
+    'master_title' => 'Project Bangla',
+    'footer_dss' =>'Project Bangla',
+    'footer_tvl' =>'Ariful Islam [Bangla]',
     'footer_powered' =>'পাওয়ার্ড বাই: ',
 
     //language

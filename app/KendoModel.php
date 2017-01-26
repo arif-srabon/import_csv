@@ -43,7 +43,7 @@ class KendoModel
 
     function __construct() {
         $host = env('DB_HOST', 'localhost');
-        $db_name = env('DB_DATABASE', 'adr_dgda'); //dss_program_qa_live_1_2
+        $db_name = env('DB_DATABASE', 'personal_db'); //dss_program_qa_live_1_2
 
         $dsn = "mysql:host={$host};dbname=$db_name;charset=utf8;";
         $username = env('DB_USERNAME', 'root');
