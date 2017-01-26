@@ -227,6 +227,48 @@ CREATE TABLE `cc_profession` (
 insert  into `cc_profession`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'1','Doctor','ডাক্তার',0,0,1,1,1,'2016-08-03 15:17:12','2016-10-06 12:55:31');
 insert  into `cc_profession`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,'2','Pharmacist','ফার্মাসিস্ট',0,0,1,1,1,'2016-08-03 15:17:24','2016-10-06 12:55:45');
 
+/*Table structure for table `common_config_maps` */
+
+DROP TABLE IF EXISTS `common_config_maps`;
+
+CREATE TABLE `common_config_maps` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `display_name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `display_name_bn` varchar(300) COLLATE utf8_unicode_ci NOT NULL,
+  `table_name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `weight` int(11) NOT NULL,
+  `is_active` tinyint(4) NOT NULL DEFAULT '0',
+  `created_by` bigint(20) unsigned DEFAULT NULL,
+  `updated_by` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `common_config_maps` */
+
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'Designation','পদবি','cc_designation',1,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,'Department','বিভাগ','cc_department',2,1,8,2,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (3,'Generic Name','Generic Name','cc_generic',3,1,9,1,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (4,'Medicine Type','Medicine Type','cc_medicine_type',4,1,5,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (5,'Profession','Profession','cc_profession',5,1,1,NULL,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (6,'Complaint Status','অভিযোগের স্ট্যাটাস','cc_complaint_status',4,1,6,1,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (7,'Report Advice','Report Advice','cc_report_advice',7,0,7,1,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (8,'Complaint Report Advice','Complaint Report Advice','cc_complaint_report_advice',4,1,NULL,NULL,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (9,'ADR Report Status','এডিআর রিপোর্ট স্ট্যাটাস','cc_adr_status',8,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (10,'Age Unit','বয়সের মাপকাঠি','cc_age_unit',9,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (11,'Weight Unit','ওজনের মাপকাঠি','cc_weight_unit',10,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (12,'Height Unit','উচ্চতার মাপকাঠি','cc_height_unit',11,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (13,'Dose Frequency','ডোজের মাত্রা','cc_dose_frequency',12,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (14,'Reaction after Action','সমস্যার প্রেক্ষিতে করণীয়','cc_reaction_after_action',13,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (15,'ADR Event Seriousness','এডিআর মাত্রার তীব্রতা','cc_adr_seriousness',14,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (16,'ADR Event Outcome','এডিআর ঘটনার ফলাফল','cc_adr_outcome',15,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (17,'Dosage Form','ডোজের ধরণ','cc_dose_form',16,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (18,'Dose Route','ঔষধ গ্রহণ-পথ','cc_dose_route',17,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (19,'ADR Reporting Advice','এডিআর উপদেশসমূহ','cc_adr_advice',18,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (20,'Counterfeit Incidents','জাল ঔষধের ঘটনাসমূহ','cc_counterfeit_incident',19,1,3,3,NULL,NULL);
+insert  into `common_config_maps`(`id`,`display_name`,`display_name_bn`,`table_name`,`weight`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (21,'Complaint Types','অভিযোগের ধরণসমূহ','cc_complaint_types',20,1,3,3,NULL,NULL);
+
 /*Table structure for table `districts` */
 
 DROP TABLE IF EXISTS `districts`;
