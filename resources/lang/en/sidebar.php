@@ -17,7 +17,7 @@ return [
     'thanaupazilla'        => 'Thana/Upazila',
     'unionward'            => 'Union / Ward',
     
-    'manufacturer'         => 'Manufacturer / Company',
+    'registration'         => 'Registration',
     'medicine_price'       => 'Brand / Medicine',
     'ADR_Reporting'        => 'ADR Reporting',
     'Complain_Box'         => 'Complain Box',

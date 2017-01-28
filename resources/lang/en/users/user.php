@@ -17,6 +17,7 @@ return [
 	'breadcrumb5' => 'profile',
 
 	'col_user_full_name' => 'User Full Name',
+	'col_user_department' => 'Department',
 	'col_username' => 'Login ID',
 		
 	'link_add_user' => 'Add User',
@@ -35,7 +36,7 @@ return [
 	'lbl_user_identity' => 'User Identity',
 	'lbl_user_full_name' => 'User Full Name *',
 	'lbl_username' => 'User Name / Login ID *',
-	'lbl_desg' => 'Designation *',
+	'lbl_desg' => 'Designation',
 	'lbl_department' => 'Department',
 	'lbl_password' => 'Password *',
 	'lbl_conf_password' => 'Confirmed Password *',

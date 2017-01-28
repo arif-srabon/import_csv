@@ -4,6 +4,9 @@ use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Model\Setup\CommonConfigModel;
 use App\Model\User\RoleModel;
+use App\Model\Setup\DistrictModel;
+use App\Model\Setup\ThanaUnionWardModel;
+use App\Model\Setup\ThanaUpazillaModel;
 use Cartalyst\Sentinel\Laravel\Facades\Activation;
 use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use DB;
@@ -102,12 +105,13 @@ class UserController extends Controller
             ->setFilterable(true)
             ->setPageable($pageable)
             ->setColumns([
-                ['field' => 'full_name', 'title' => trans('users/user.col_user_full_name'), 'width' => "200px"],
-                ['field' => 'email', 'title' => trans('users/user.col_username'), 'width' => "120px"],
-                ['field' => 'official_email', 'title' => trans('users/user.lbl_email')],
-                ['field' => 'mobile', 'title' => trans('users/user.lbl_mobile')],
-                ['field' => 'manufacturer', 'title' => trans('users/user.lbl_manufacturer')],
-                ['field' => 'status', 'title' => trans('users/user.lbl_status'), 'filterable' => false, 'template' => $status],
+                ['field' => 'full_name', 'title' => trans('users/user.col_user_full_name'), 'width' => "130px"],
+                ['field' => 'department', 'title' => trans('users/user.col_user_department'), 'width' => "115px"],
+                ['field' => 'designation', 'title' => trans('users/user.lbl_desg'),'width' => "100px"],
+                ['field' => 'email', 'title' => trans('users/user.col_username'), 'width' => "100px"],
+                ['field' => 'official_email', 'title' => trans('users/user.lbl_email'),'width' => "100px"],
+                ['field' => 'mobile', 'title' => trans('users/user.lbl_mobile'),'width' => "90px"],
+                ['field' => 'status', 'title' => trans('users/user.lbl_status'),'width' => "80px", 'filterable' => false, 'template' => $status],
             ]);
 
 
@@ -136,19 +140,24 @@ class UserController extends Controller
     public function read()
     {
         $request = json_decode(file_get_contents('php://input'));
-
-        $table = 'users
-                    LEFT JOIN manufacturer ON manufacturer.id = users.manufacturer_id
-                    LEFT JOIN cc_designation ON cc_designation.id = users.designation_id';
+        if($this->lang == 'bn'){
+            $full_name = 'full_name_bn';
+            $name = 'name_bn';
+        }else{
+            $full_name='full_name';
+            $name='name';
+        }
+        $table = "users
+                    LEFT JOIN cc_department ON cc_department.id = users.department_id
+                    LEFT JOIN cc_designation ON cc_designation.id = users.designation_id";
         $properties = array('users.id AS id',
-                        'users.email AS email',
-                        'users.full_name AS full_name',
-                        'users.official_email AS official_email',
-                        'users.`status` AS `status`',
-                        'users.mobile AS mobile',
-                        'manufacturer.`name` AS manufacturer',
-                        'cc_designation.`name` AS designation',
-                        'cc_designation.name_bn AS designation_bn'
+                    'users.email AS email',
+                    "users.$full_name AS full_name",
+                    'users.official_email AS official_email',
+                    'users.status AS status',
+                    'users.mobile AS mobile',
+                    "cc_department.$name AS department",
+                    "cc_designation.$name AS designation",
                 );
 
         $this->kds = new kds;
@@ -186,7 +195,8 @@ class UserController extends Controller
         $data['assignedRole'] = [];
         $roles = new RoleModel;
         $data['allRoles'] = $roles->getAllList();
-
+        $savedData = $this->_getSavedUserBasicData();
+        $data = array_merge($data, $savedData);
         return view('user.create')->with($data);
     }
 
@@ -221,15 +231,17 @@ class UserController extends Controller
     public function store(UserRequest $request)
     {
         try {
-            dd($request);
+//            dd($request);
             $user = $this->_registerUser($request);
             $userInfo = User::findOrFail($user->id);
             $userInfo->created_by = Session::get('sess_user_id');
             $userInfo->update($request->all());
 
             $this->uploadPhoto($request, $user->id);
+            $this->uploadSign($request, $user->id);
             // save user roles
             $userRoleIds = $request->input('assigned_roles_list');
+//            dd($userRoleIds);
             if (is_array($userRoleIds) && count($userRoleIds)) {
                 $user->roles()->sync($userRoleIds);
             }
@@ -258,7 +270,12 @@ class UserController extends Controller
         \Assets::add(['plugins/forms/validation/validate.min.js',
             'plugins/forms/styling/uniform.min.js',
             'plugins/forms/selects/select2.min.js',
-            'app/user_form_validation.js'
+            'app/user_form_validation.js',
+            'plugins/ui/moment/moment.min.js',
+            'plugins/jquery.relatedselects.js',
+            'plugins/bootstrap-datetimepicker.min.js',
+            'bootstrap-datetimepicker-standalone.css',
+            'core/libraries/jquery.form.js'
         ]);
 
         // breadcrumbs
@@ -275,7 +292,8 @@ class UserController extends Controller
 
         $user = User::findOrFail($id);
         $data['assignedRole'] = $user->assigned_roles_list->toArray();
-
+        $savedData = $this->_getSavedUserBasicData($user);
+        $data = array_merge($data, $savedData);
         return view('user.edit', compact('user'))->with($data);
     }
 
@@ -298,7 +316,7 @@ class UserController extends Controller
 
             // upload
             $this->uploadPhoto($request, $id);
-
+            $this->uploadSign($request, $id);
             // save user roles
             $userRoleIds = $request->input('assigned_roles_list');
             if (is_array($userRoleIds) && count($userRoleIds)) {
@@ -365,6 +383,20 @@ class UserController extends Controller
         }
     }
 
+    public function uploadSign($request, $id){
+        $file = $request->file('user_sign');
+        if (!empty($file)) {
+            $uploadPath = config('app_config.user_upload_sign_path') . "$id/";
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path($uploadPath), $fileName);
+            $uploadFile = $uploadPath . $fileName;
+            // update path
+            $entry = User::find($id);
+            $entry->user_sign = $uploadFile;
+            $entry->save();
+        }
+    }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -398,6 +430,35 @@ class UserController extends Controller
         $data['gender'] = $cConfig->getAllCommonConfigList('cc_genders', $this->lang);
         $data['maritalstatus'] = $cConfig->getAllCommonConfigList('cc_marital_status', $this->lang);
         $data['divisionList'] = $cConfig->getAllDivisionList('divisions', $this->lang);
+        return $data;
+    }
+
+    private function _getSavedUserBasicData($user = null)
+    {
+        if (empty($user)) {
+            $data['districtList'] = [];
+            $data['upazillaList'] = [];
+            $data['wardList'] = [];
+            $data['present_districtList'] = [];
+            $data['present_upazillaList'] = [];
+            $data['present_wardList'] = [];
+
+            return $data;
+        }
+
+        $district = new DistrictModel;
+        $data['districtList'] = $district->getAllDistrictByDivisionList($user->permanent_division);
+        $upazilla = new ThanaUpazillaModel;
+        $data['upazillaList'] = $upazilla->getAllUpazillaByDistrictList($user->permanent_district);
+        $ward = new ThanaUnionWardModel;
+        $data['wardList'] = $ward->getAllWardByUpazillaList($user->permanent_upzilla);
+        $district = new DistrictModel;
+        $data['present_districtList'] = $district->getAllDistrictByDivisionList($user->present_division);
+        $upazilla = new ThanaUpazillaModel;
+        $data['present_upazillaList'] = $upazilla->getAllUpazillaByDistrictList($user->present_district);
+        $ward = new ThanaUnionWardModel;
+        $data['present_wardList'] = $ward->getAllWardByUpazillaList($user->present_upzilla);
+
         return $data;
     }
 

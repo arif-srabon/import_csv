@@ -56,7 +56,7 @@ class UserModel extends Model
         'updated_at'
     ];
 
-
+    protected $dates = ['date_of_joining', 'date_of_birth'];
     /**
      * Get the roles for the user
      */
@@ -75,4 +75,36 @@ class UserModel extends Model
         return $this->roles->lists('id');
     }
 
+
+    public function setDateOfBirthAttribute($date)
+    {
+        if (!empty($date)) {
+            $this->attributes['date_of_birth'] = Carbon::createFromFormat('d-m-Y', $date)->format('Y-m-d');
+        } else {
+            $this->attributes['date_of_birth'] = (NULL);
+        }
+    }
+
+    public function setDateOfJoiningAttribute($date)
+    {
+        if (!empty($date)) {
+            $this->attributes['date_of_joining'] = Carbon::createFromFormat('d-m-Y', $date)->format('Y-m-d');
+        } else {
+            $this->attributes['date_of_joining'] = (NULL);
+        }
+    }
+
+    public function getDateOfBirthAttribute($date)
+    {
+        if (!empty($date)) {
+            return Carbon::createFromFormat('Y-m-d', $date)->format('d-m-Y');
+        }
+    }
+
+    public function getDateOfJoiningAttribute($date)
+    {
+        if (!empty($date)) {
+            return Carbon::createFromFormat('Y-m-d', $date)->format('d-m-Y');
+        }
+    }
 }

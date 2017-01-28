@@ -7,12 +7,12 @@
  */
 
 namespace App\Model\Setup;
-
+use Cache;
 use Illuminate\Database\Eloquent\Model;
 
 class ThanaUnionWardModel extends Model
 {
-    protected $table = 'wards';
+    protected $table = 'union_wards';
 
     protected $fillable = [
         'division_id',
@@ -33,5 +33,15 @@ class ThanaUnionWardModel extends Model
     public function District()
     {
         return $this->belongsTo('District');
+    }
+
+    public function getAllWardByUpazillaList($upazilla_id)
+    {
+        $value = Cache::remember('cache_upzillaList_' . $upazilla_id, config('app_config.cache_time_limit'), function () use ($upazilla_id) {
+            return $this->where('thana_upazila_id', $upazilla_id)
+                ->orderBy('name', 'asc')->lists('name', 'id');
+        });
+
+        return $value;
     }
 }

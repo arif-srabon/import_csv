@@ -27,7 +27,7 @@ CREATE TABLE `access_log` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `access_log` */
 
@@ -59,6 +59,13 @@ insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`
 insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (26,0,1,'127.0.0.1','2017-01-26 11:17:02','2017-01-26 11:20:01','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-26 11:17:02','2017-01-26 11:20:01');
 insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (27,0,1,'127.0.0.1','2017-01-26 11:20:04','2017-01-26 13:29:56','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-26 11:20:04','2017-01-26 13:29:56');
 insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (28,0,1,'127.0.0.1','2017-01-26 13:40:59',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-26 13:40:59',NULL);
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (29,0,1,'127.0.0.1','2017-01-28 11:12:59','2017-01-28 13:09:03','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 11:12:59','2017-01-28 13:09:03');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (30,0,1,'127.0.0.1','2017-01-28 13:09:07','2017-01-28 13:11:41','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 13:09:07','2017-01-28 13:11:41');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (31,0,1,'127.0.0.1','2017-01-28 13:11:44','2017-01-28 13:54:45','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 13:11:44','2017-01-28 13:54:45');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (32,0,1,'127.0.0.1','2017-01-28 13:54:49','2017-01-28 14:03:48','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 13:54:49','2017-01-28 14:03:48');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (33,0,1,'127.0.0.1','2017-01-28 14:04:29','2017-01-28 14:06:13','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 14:04:29','2017-01-28 14:06:13');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (34,0,1,'127.0.0.1','2017-01-28 14:06:16',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 14:06:16',NULL);
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (35,0,1,'127.0.0.1','2017-01-28 17:26:19',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 17:26:19',NULL);
 
 /*Table structure for table `activations` */
 
@@ -73,7 +80,7 @@ CREATE TABLE `activations` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1235 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1241 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `activations` */
 
@@ -88,6 +95,12 @@ insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`cre
 insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1232,1,'UrbzKEB8aBiB4grnVOjWmtr3ag93CfAy',1,'2016-10-03 13:43:55','2016-10-03 13:43:55','2016-10-03 13:43:55');
 insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1233,1,'MC93lFZAJOsBTJrY7alkRoLj6zYYunD8',1,'2017-01-26 11:19:43','2017-01-26 11:19:43','2017-01-26 11:19:43');
 insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1234,1088,'E2oTHc7VFNjtsi4K6ItEvl5bukCIflBf',1,'2017-01-26 11:30:21','2017-01-26 11:30:21','2017-01-26 11:30:21');
+insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1235,2,'tBytiqAozVDItXLhXy7b0UffKOhUfJIE',1,'2017-01-28 11:22:41','2017-01-28 11:22:40','2017-01-28 11:22:41');
+insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1236,3,'hsCRQahx7ArnsA5CUcAo2WLUy6PnO5yO',1,'2017-01-28 11:26:54','2017-01-28 11:26:54','2017-01-28 11:26:54');
+insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1237,4,'wiNZURw7AaVWY40QdZwjzMUbqAOQBCVc',1,'2017-01-28 12:58:51','2017-01-28 12:58:51','2017-01-28 12:58:51');
+insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1238,4,'UP4Ndwiv8uL23XVtFCPfvenNRdcpd2Cs',1,'2017-01-28 13:04:28','2017-01-28 13:04:28','2017-01-28 13:04:28');
+insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1239,3,'itguJtUAv0ozPOeuO5sTiBXypilhCSG1',1,'2017-01-28 13:04:54','2017-01-28 13:04:54','2017-01-28 13:04:54');
+insert  into `activations`(`id`,`user_id`,`code`,`completed`,`completed_at`,`created_at`,`updated_at`) values (1240,1,'gBljX7ArlP0xpEZwotIzJPIAemNJcVhG',1,'2017-01-28 13:11:32','2017-01-28 13:11:32','2017-01-28 13:11:32');
 
 /*Table structure for table `cc_department` */
 
@@ -110,9 +123,9 @@ CREATE TABLE `cc_department` (
 
 /*Data for the table `cc_department` */
 
-insert  into `cc_department`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'1','Union','ইউনিয়ন',1,1,1,2,3,NULL,NULL);
-insert  into `cc_department`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,'2','City Corporation','সিটি কর্পোরেশন',1,0,1,7,4,NULL,NULL);
-insert  into `cc_department`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (3,'3','Paurasava','পৌরসভা',1,0,1,5,3,NULL,NULL);
+insert  into `cc_department`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'UUU','Union','ইউনিয়ন',1,1,1,2,3,NULL,NULL);
+insert  into `cc_department`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,'CCC','City Corporation','সিটি কর্পোরেশন',1,0,1,7,4,NULL,NULL);
+insert  into `cc_department`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (3,'PPP','Paurasava','পৌরসভা',1,0,1,5,3,NULL,NULL);
 
 /*Table structure for table `cc_designation` */
 
@@ -878,7 +891,7 @@ CREATE TABLE `persistences` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `persistences_code_unique` (`code`)
-) ENGINE=InnoDB AUTO_INCREMENT=1789 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1797 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `persistences` */
 
@@ -943,7 +956,8 @@ insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) val
 insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1759,1083,'L2o0NCKaTpEH9LdMVdqHgqPcwUQAL0TM','2016-12-08 11:01:17','2016-12-08 11:01:17');
 insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1760,1083,'Ow19xlM6fVLbv9UpmX6VX8ZpbpgOemYD','2016-12-11 11:06:32','2016-12-11 11:06:32');
 insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1763,1083,'aIt3tDUTJSP6PUjpCnTmUQ4mVH3KJ67N','2016-12-28 10:53:30','2016-12-28 10:53:30');
-insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1788,1,'1bm73h0sUGhfinEDm01egGrFVvZ4hXA2','2017-01-26 13:40:59','2017-01-26 13:40:59');
+insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1795,1,'6e3VDhP1KnrIIxwyY4YkiypTOaXKEufq','2017-01-28 14:06:16','2017-01-28 14:06:16');
+insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1796,1,'X1Zrsax88JIogPQkmEBUgSNkNgmd0Iro','2017-01-28 17:26:18','2017-01-28 17:26:18');
 
 /*Table structure for table `reminders` */
 
@@ -979,97 +993,12 @@ CREATE TABLE `role_users` (
 /*Data for the table `role_users` */
 
 insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1,17,'2016-09-22 14:04:52','2016-09-22 14:04:52');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (152,2,'2016-04-24 17:10:57','2016-04-24 17:10:57');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (152,3,'2016-04-24 17:10:57','2016-04-24 17:10:57');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (600,2,'2016-04-07 16:34:29','2016-04-07 16:34:29');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (600,4,'2016-04-07 13:46:46','2016-04-07 13:46:46');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (600,5,'2016-04-06 15:11:57','2016-04-06 15:11:57');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (611,4,'2016-05-24 11:24:58','2016-05-24 11:24:58');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1024,1,'2016-04-06 11:07:06','2016-04-06 11:07:06');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1036,2,'2016-04-21 10:11:20','2016-04-21 10:11:20');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1036,3,'2016-04-21 10:11:20','2016-04-21 10:11:20');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1037,2,'2016-04-21 10:10:54','2016-04-21 10:10:54');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1037,3,'2016-04-21 10:10:54','2016-04-21 10:10:54');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1038,2,'2016-04-21 10:41:24','2016-04-21 10:41:24');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1038,3,'2016-04-21 10:41:24','2016-04-21 10:41:24');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1039,2,'2016-04-21 11:14:21','2016-04-21 11:14:21');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1039,3,'2016-04-21 11:14:21','2016-04-21 11:14:21');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1039,4,'2016-05-22 09:29:52','2016-05-22 09:29:52');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1040,2,'2016-04-21 15:12:18','2016-04-21 15:12:18');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1040,3,'2016-04-21 15:12:18','2016-04-21 15:12:18');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1041,2,'2016-04-21 15:22:27','2016-04-21 15:22:27');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1041,3,'2016-04-21 15:22:27','2016-04-21 15:22:27');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1042,2,'2016-04-21 15:27:13','2016-04-21 15:27:13');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1042,3,'2016-04-21 15:27:13','2016-04-21 15:27:13');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1043,2,'2016-04-21 15:29:39','2016-04-21 15:29:39');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1043,3,'2016-04-21 15:29:39','2016-04-21 15:29:39');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1044,2,'2016-04-21 15:31:46','2016-04-21 15:31:46');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1044,3,'2016-04-21 15:31:46','2016-04-21 15:31:46');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1045,2,'2016-04-21 15:33:38','2016-04-21 15:33:38');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1045,3,'2016-04-21 15:33:38','2016-04-21 15:33:38');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1046,2,'2016-04-21 15:35:47','2016-04-21 15:35:47');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1046,3,'2016-04-21 15:35:47','2016-04-21 15:35:47');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1047,2,'2016-04-25 12:16:30','2016-04-25 12:16:30');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1047,3,'2016-04-25 12:16:30','2016-04-25 12:16:30');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1048,2,'2016-04-21 15:43:04','2016-04-21 15:43:04');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1048,3,'2016-04-21 15:43:04','2016-04-21 15:43:04');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1049,2,'2016-04-21 15:45:01','2016-04-21 15:45:01');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1049,3,'2016-04-21 15:45:01','2016-04-21 15:45:01');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1050,2,'2016-04-21 15:47:00','2016-04-21 15:47:00');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1050,3,'2016-04-21 15:47:00','2016-04-21 15:47:00');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1052,2,'2016-04-21 15:49:50','2016-04-21 15:49:50');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1052,3,'2016-04-21 15:49:50','2016-04-21 15:49:50');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1053,2,'2016-04-21 15:51:44','2016-04-21 15:51:44');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1053,3,'2016-04-21 15:51:44','2016-04-21 15:51:44');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1054,2,'2016-04-21 15:53:29','2016-04-21 15:53:29');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1054,3,'2016-04-21 15:53:29','2016-04-21 15:53:29');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1055,2,'2016-04-21 15:56:01','2016-04-21 15:56:01');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1055,3,'2016-04-21 15:56:01','2016-04-21 15:56:01');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1056,2,'2016-04-21 15:58:25','2016-04-21 15:58:25');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1056,3,'2016-04-21 15:58:25','2016-04-21 15:58:25');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1057,2,'2016-04-21 16:00:14','2016-04-21 16:00:14');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1057,3,'2016-04-21 16:00:14','2016-04-21 16:00:14');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1058,2,'2016-04-21 16:05:32','2016-04-21 16:05:32');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1058,3,'2016-04-21 16:05:32','2016-04-21 16:05:32');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1059,2,'2016-04-21 16:07:21','2016-04-21 16:07:21');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1059,3,'2016-04-21 16:07:21','2016-04-21 16:07:21');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1060,2,'2016-04-24 18:52:31','2016-04-24 18:52:31');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1060,3,'2016-04-24 18:52:31','2016-04-24 18:52:31');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1061,2,'2016-05-08 11:50:41','2016-05-08 11:50:41');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1061,3,'2016-05-08 11:50:40','2016-05-08 11:50:40');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1061,4,'2016-05-08 11:50:40','2016-05-08 11:50:40');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1062,2,'2016-05-08 15:00:12','2016-05-08 15:00:12');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1063,2,'2016-05-12 10:52:01','2016-05-12 10:52:01');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1063,4,'2016-05-12 10:52:01','2016-05-12 10:52:01');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1064,6,'2016-05-15 05:13:29','2016-05-15 05:13:29');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1065,6,'2016-05-15 05:11:52','2016-05-15 05:11:52');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1066,6,'2016-05-15 05:12:43','2016-05-15 05:12:43');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1067,2,'2016-05-15 11:53:25','2016-05-15 11:53:25');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1067,3,'2016-05-15 11:53:25','2016-05-15 11:53:25');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1068,2,'2016-05-15 12:02:48','2016-05-15 12:02:48');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1068,3,'2016-05-15 12:02:48','2016-05-15 12:02:48');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1069,2,'2016-05-22 04:53:25','2016-05-22 04:53:25');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1069,3,'2016-05-22 04:53:25','2016-05-22 04:53:25');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1069,4,'2016-05-22 04:53:25','2016-05-22 04:53:25');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1070,7,'2016-05-16 10:36:53','2016-05-16 10:36:53');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1071,7,'2016-05-16 11:04:12','2016-05-16 11:04:12');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1072,7,'2016-05-16 11:17:52','2016-05-16 11:17:52');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1073,1,'2016-05-17 05:25:56','2016-05-17 05:25:56');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1073,2,'2016-05-17 05:25:56','2016-05-17 05:25:56');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1073,3,'2016-05-17 05:25:56','2016-05-17 05:25:56');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1073,4,'2016-05-17 05:25:56','2016-05-17 05:25:56');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1073,6,'2016-05-17 05:25:56','2016-05-17 05:25:56');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1073,7,'2016-05-17 05:25:56','2016-05-17 05:25:56');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1074,2,'2016-05-17 09:54:20','2016-05-17 09:54:20');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1075,8,'2016-05-17 11:15:58','2016-05-17 11:15:58');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1076,2,'2016-05-25 04:46:57','2016-05-25 04:46:57');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1077,2,'2016-05-30 12:30:32','2016-05-30 12:30:32');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1078,4,'2016-05-31 05:55:59','2016-05-31 05:55:59');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1078,13,'2016-05-31 05:56:00','2016-05-31 05:56:00');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1078,14,'2016-05-31 05:56:00','2016-05-31 05:56:00');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1081,2,'2016-06-07 09:58:07','2016-06-07 09:58:07');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1082,2,'2016-06-08 09:46:08','2016-06-08 09:46:08');
-insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (1088,18,'2017-01-26 11:30:21','2017-01-26 11:30:21');
+insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (2,17,'2017-01-28 11:22:41','2017-01-28 11:22:41');
+insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (3,16,'2017-01-28 13:04:54','2017-01-28 13:04:54');
+insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (3,19,'2017-01-28 13:04:54','2017-01-28 13:04:54');
+insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (4,16,'2017-01-28 12:58:51','2017-01-28 12:58:51');
+insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (4,17,'2017-01-28 13:04:28','2017-01-28 13:04:28');
+insert  into `role_users`(`user_id`,`role_id`,`created_at`,`updated_at`) values (4,18,'2017-01-28 13:04:28','2017-01-28 13:04:28');
 
 /*Table structure for table `roles` */
 
@@ -9986,11 +9915,14 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `users_email_unique` (`email`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'admin','$2y$10$09Wqe0iKjFqpn2C9vyzvI.KftUIHT4QDSrTpI4XWJqD3Xdkw.fL/q','প্রশাসক',NULL,0,1,'admin@gmail.com',NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,NULL,1,'{\"manufacturer.uniquenumber.view\":true,\"manufacturer.uniquenumber.add\":true,\"manufacturer.uniquenumber.edit\":true,\"manufacturer.uniquenumber.del\":true,\"transactions.adrreporting.view\":true,\"transactions.adrreporting.add\":true,\"transactions.adrreporting.edit\":true,\"transactions.adrreporting.print\":true,\"transactions.complaint.view\":true,\"transactions.complaint.print\":true,\"transactions.complaint.edit\":true,\"transactions.counterfeit.view\":true,\"transactions.counterfeit.add\":true,\"transactions.counterfeit.edit\":true,\"transactions.counterfeit.del\":true,\"transactions.counterfeit.print\":true,\"transactions.news.view\":true,\"transactions.news.add\":true,\"transactions.news.edit\":true,\"transactions.news.del\":true,\"dss.settings.commonconfig.view\":true,\"dss.settings.commonconfig.add\":true,\"dss.settings.commonconfig.edit\":true,\"dss.settings.commonconfig.del\":true,\"dss.settings.division.view\":true,\"dss.settings.division.add\":true,\"dss.settings.division.edit\":true,\"dss.settings.division.del\":true,\"dss.settings.district.view\":true,\"dss.settings.district.add\":true,\"dss.settings.district.edit\":true,\"dss.settings.district.del\":true,\"dss.settings.thana_upazilla.view\":true,\"dss.settings.thana_upazilla.add\":true,\"dss.settings.thana_upazilla.edit\":true,\"dss.settings.thana_upazilla.del\":true,\"dss.settings.unionward.view\":true,\"dss.settings.unionward.add\":true,\"dss.settings.unionward.edit\":true,\"dss.settings.unionward.del\":true,\"dss.settings.allowance_program.view\":true,\"dss.settings.allowance_program.add\":true,\"dss.settings.allowance_program.edit\":true,\"dss.settings.allowance_program.del\":true,\"settings.manufacturer.view\":true,\"settings.manufacturer.add\":true,\"settings.manufacturer.edit\":true,\"settings.manufacturer.del\":true,\"settings.medicine.view\":true,\"settings.medicine.add\":true,\"settings.medicine.edit\":true,\"settings.medicine.del\":true,\"settings.importfile.view\":true,\"reports.testreport.view\":true,\"dss.security.role.view\":true,\"dss.security.role.add\":true,\"dss.security.role.edit\":true,\"dss.security.role.del\":true,\"dss.security.role.permission\":true,\"dss.security.users.view\":true,\"dss.security.users.add\":true,\"dss.security.users.edit\":true,\"dss.security.users.del\":true,\"dss.security.users.permission\":true,\"web.pages.view\":true}','2017-01-26 17:52:40',NULL,NULL,'0000-00-00 00:00:00','2017-01-26 17:52:40');
+insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'admin','$2y$10$76eQUxQBNnkwggrCZm1ZiuHV0aScyfgsnEcKpXSBFPpLOr.BjTgPe','প্রশাসক','Admin',11,1,'admin@gmail.com','0123456789','','','','','',0,0,'',NULL,NULL,'uploads/user/photo/1/1485587492.jpg',NULL,'','',0,NULL,NULL,NULL,'','','',0,NULL,NULL,NULL,'',1,'{\"manufacturer.uniquenumber.view\":true,\"manufacturer.uniquenumber.add\":true,\"manufacturer.uniquenumber.edit\":true,\"manufacturer.uniquenumber.del\":true,\"transactions.adrreporting.view\":true,\"transactions.adrreporting.add\":true,\"transactions.adrreporting.edit\":true,\"transactions.adrreporting.print\":true,\"transactions.complaint.view\":true,\"transactions.complaint.print\":true,\"transactions.complaint.edit\":true,\"transactions.counterfeit.view\":true,\"transactions.counterfeit.add\":true,\"transactions.counterfeit.edit\":true,\"transactions.counterfeit.del\":true,\"transactions.counterfeit.print\":true,\"transactions.news.view\":true,\"transactions.news.add\":true,\"transactions.news.edit\":true,\"transactions.news.del\":true,\"dss.settings.commonconfig.view\":true,\"dss.settings.commonconfig.add\":true,\"dss.settings.commonconfig.edit\":true,\"dss.settings.commonconfig.del\":true,\"dss.settings.division.view\":true,\"dss.settings.division.add\":true,\"dss.settings.division.edit\":true,\"dss.settings.division.del\":true,\"dss.settings.district.view\":true,\"dss.settings.district.add\":true,\"dss.settings.district.edit\":true,\"dss.settings.district.del\":true,\"dss.settings.thana_upazilla.view\":true,\"dss.settings.thana_upazilla.add\":true,\"dss.settings.thana_upazilla.edit\":true,\"dss.settings.thana_upazilla.del\":true,\"dss.settings.unionward.view\":true,\"dss.settings.unionward.add\":true,\"dss.settings.unionward.edit\":true,\"dss.settings.unionward.del\":true,\"dss.settings.allowance_program.view\":true,\"dss.settings.allowance_program.add\":true,\"dss.settings.allowance_program.edit\":true,\"dss.settings.allowance_program.del\":true,\"settings.manufacturer.view\":true,\"settings.manufacturer.add\":true,\"settings.manufacturer.edit\":true,\"settings.manufacturer.del\":true,\"settings.medicine.view\":true,\"settings.medicine.add\":true,\"settings.medicine.edit\":true,\"settings.medicine.del\":true,\"settings.importfile.view\":true,\"reports.testreport.view\":true,\"dss.security.role.view\":true,\"dss.security.role.add\":true,\"dss.security.role.edit\":true,\"dss.security.role.del\":true,\"dss.security.role.permission\":true,\"dss.security.users.view\":true,\"dss.security.users.add\":true,\"dss.security.users.edit\":true,\"dss.security.users.del\":true,\"dss.security.users.permission\":true,\"web.pages.view\":true}','2017-01-28 17:26:18',NULL,1,'0000-00-00 00:00:00','2017-01-28 17:26:18');
+insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,'arif','$2y$10$almRVWEZAjODFMrWmXgRuOI2XqbBrKP21pivSIoHD3Axuc2XWEiAW','Ariful Islam Srabon','Arifulislalmsrids',19,1,'arif@gmail.com','0125566','Father\'s Name','Mother\'s Name','01920869772','0135467895215689','01224568',1,1,'B+','1991-02-08','2017-01-01','uploads/user/photo/2/1485580961.jpg','uploads/user/sign/2/1485580961.jpg','43','dsfsf',4,35,384,4473,'12456','78','jjjjj',2,7,1,599,'25556',1,NULL,NULL,1,NULL,'2017-01-28 11:22:40','2017-01-28 11:22:41');
+insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (3,'rakib','$2y$10$ZSQZRug2eaz6y2GHb1u7e.IkxgCZSHXMMlqPNDonHR.9q18Zy/9mW','Rakibul Islam Rakib','Rakibul Islam Rakib',18,3,'rakib@gmail.com','0123456789','Father\'s Name','Mother\'s Name','01920869772','0135467895215689','01224568',1,2,'B+','1991-02-08','2017-01-01','uploads/user/photo/3/1485581214.jpg','uploads/user/sign/3/1485581214.jpg','43','Village Permanent',1,4,788,371,'12456','78','Village Present',3,20,190,2584,'25556',1,NULL,NULL,1,1,'2017-01-28 11:26:54','2017-01-28 13:04:54');
+insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (4,'sharif','$2y$10$GuwqTP1ntWmP5B4dH/r82uh2m32BnzuyZqWrWTCc41jGy.CLwtrlK','Shariful Islam','Shariful Islam',18,1,'sharif@gmail.com','0123456789','Father\'s Name','Mother\'s Name','01920869772','0135467895215689','01224568',1,1,'B+','1991-02-08','2017-01-01','uploads/user/photo/4/1485586731.jpg','uploads/user/sign/4/1485586731.jpg','4333','gazipur',3,21,194,2720,'12456','234','gazipur',4,38,407,4841,'000000',1,NULL,NULL,1,1,'2017-01-28 12:58:51','2017-01-28 13:04:27');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;

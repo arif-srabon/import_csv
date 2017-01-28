@@ -16,8 +16,8 @@ return [
     'district'             => 'জেলা',
     'thanaupazilla'        => 'উপজেলা / থানা',
     'unionward'            => 'ইউনিয়ন / ওয়ার্ড',
-    
-    'manufacturer'         => 'প্রস্তুতকারক / কোম্পানী',
+
+	'registration'         => 'Registration',
     'medicine_price'       => 'ব্র্যান্ড / মেডিসিন',
     'ADR_Reporting'        => 'এডিআর রিপোর্টিং',
     'counterfeit'          => 'জাল মেডিসিন / ডিভাইস',

@@ -390,7 +390,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 {!! Form::label('permanent_district', 'District') !!}
-                                                {!! Form::select('permanent_district', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                                {!! Form::select('permanent_district', $districtList, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                                 @if ($errors->has('permanent_district'))<p
                                                         class="text-danger">{!!$errors->first('permanent_district')!!}</p>@endif
                                             </div>
@@ -400,7 +400,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 {!! Form::label('permanent_upzilla', 'Upazila / Thana') !!}
-                                                {!! Form::select('permanent_upzilla', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                                {!! Form::select('permanent_upzilla', $upazillaList, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                                 @if ($errors->has('permanent_upzilla'))<p
                                                         class="text-danger">{!!$errors->first('permanent_upzilla')!!}</p>@endif
                                             </div>
@@ -408,7 +408,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 {!! Form::label('permanent_ward', 'Ward') !!}
-                                                {!! Form::select('permanent_ward', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                                {!! Form::select('permanent_ward', $wardList, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                                 @if ($errors->has('permanent_ward'))<p
                                                         class="text-danger">{!!$errors->first('permanent_ward')!!}</p>@endif
                                             </div>
@@ -462,7 +462,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 {!! Form::label('present_district', 'District') !!}
-                                                {!! Form::select('present_district', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                                {!! Form::select('present_district', $present_districtList, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                                 @if ($errors->has('present_district'))<p
                                                         class="text-danger">{!!$errors->first('present_district')!!}</p>@endif
                                             </div>
@@ -472,7 +472,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 {!! Form::label('present_upzilla', 'Upazila / Thana') !!}
-                                                {!! Form::select('present_upzilla', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                                {!! Form::select('present_upzilla',$present_upazillaList, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                                 @if ($errors->has('present_upzilla'))<p
                                                         class="text-danger">{!!$errors->first('present_upzilla')!!}</p>@endif
                                             </div>
@@ -480,7 +480,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 {!! Form::label('present_ward', 'Ward') !!}
-                                                {!! Form::select('present_ward', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                                {!! Form::select('present_ward', $present_wardList, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                                 @if ($errors->has('present_ward'))<p
                                                         class="text-danger">{!!$errors->first('present_ward')!!}</p>@endif
                                             </div>
@@ -524,18 +524,19 @@
 </div>
 
 <script type="application/javascript">
-
+    $(function () {
+        $(".date_format").datetimepicker({
+            format: "DD-MM-YYYY"
+        });
+    });
     $(document).ready(function () {
  
         if ($("#full_name").val() == '') {
             $("#email").val('');
             $("#password").val('');
         }
-        $(function () {
-            $(".date_format").datetimepicker({
-                format: "DD-MM-YYYY"
-            });
-        });
+
     });
+
 
 </script>

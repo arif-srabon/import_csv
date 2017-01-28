@@ -87,7 +87,11 @@
                         </ul>
                     </li>
                     {{--@endif--}}
-
+                        <li class="@yield('menu_registration')">
+                            <a href="{{url('registration')}}">
+                                <i class="glyphicon glyphicon-registration-mark"></i> <span>{{trans('sidebar.registration')}}</span>
+                            </a>
+                        </li>
                     {{--@if (SentinelAuth::check('transactions.news.view'))--}}
                         {{--<li class="@yield('menu_news')">--}}
                             {{--<a href="{{url('news')}}">--}}

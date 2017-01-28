@@ -28,13 +28,14 @@ return [
 	'btn_delete' => 'মুছে ফেলুন',
 
 	'col_user_full_name' => 'ব্যবহারকারীর পূর্ণ নাম ',
+	'col_user_department' => 'ডিপার্টমেন্ট',
 	'col_username' => 'লগইন আইডি ',
 
 	'lbl_add_user_title' => 'ব্যবহারকারীর তথ্য সংযোজন করুন',
 	'lbl_user_identity' => 'ব্যবহারকারীর পরিচয়',
 	'lbl_user_full_name' => 'ব্যবহারকারীর পূর্ণ নাম *',
 	'lbl_username' => 'ব্যবহারকারী নাম / লগইন আইডি *',
-	'lbl_desg' => 'পদবি *',
+	'lbl_desg' => 'পদবি ',
 	'lbl_department' => 'বিভাগ',
 	'lbl_password' => 'পাসওয়ার্ড *',
 	'lbl_conf_password' => 'পাসওয়ার্ড নিশ্চিত করুন *',

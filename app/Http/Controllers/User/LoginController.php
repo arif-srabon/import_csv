@@ -6,6 +6,7 @@ use Cartalyst\Sentinel\Laravel\Facades\Sentinel;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use Session;
+use DB;
 
 class LoginController extends Controller
 {
@@ -36,10 +37,20 @@ class LoginController extends Controller
                 //return 'auth success';
                 Session::set("user_auth", $auth);
                 Session::set("sess_user_id", $auth->id);
-                Session::set("sess_center_id", $auth->idsc_center_id);
+                Session::set("sess_department_id", $auth->department_id);
                 Session::set("sess_user_desg_id", $auth->designation_id);
                 Session::set("sess_user_full_name", $auth->full_name);
                 Session::set("sess_user_image", $auth->user_photo);
+
+
+                $designation = DB::select(DB::raw("SELECT NAME as designation, name_bn as designation_bn  FROM cc_designation WHERE id = '$auth->designation_id' "));
+                Session::set("sess_user_desg", $designation[0]->designation);
+                Session::set("sess_user_desg_bn", $designation[0]->designation_bn);
+
+                $department = DB::select(DB::raw("SELECT code,NAME as department,name_bn as department_bn FROM cc_department WHERE id = '$auth->department_id' "));
+                Session::set("sess_user_dept", $department[0]->department);
+                Session::set("sess_user_dept_bn", $department[0]->department_bn);
+                Session::set("sess_dept_code", $department[0]->code);
 
                 // save access log
                 $accessLog->saveAccesslog();

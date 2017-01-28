@@ -230,7 +230,9 @@ Route::resource('news', 'Trans\NewsController');
 //    $api->get('complaints/{id}', 'App\Http\Controllers\Api\V1\ComplaintController@complaints');
 //    $api->get('complaintscount/{id}', 'App\Http\Controllers\Api\V1\ComplaintController@complaintsCount');
 //});
-
+//Registration
+Route::get('registration','Trans\RegistrationController@index');
+Route::get('registration/create','Trans\RegistrationController@create');
 // route for import
 Route::get('importfile','Import\ImportController@index');
 Route::post('importfile/store','Import\ImportController@store');

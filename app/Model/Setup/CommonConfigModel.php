@@ -167,4 +167,16 @@ class CommonConfigModel extends Model
         $age=(FLOAT)$age;
         return $age;
     }
+
+    // for registration
+    public function getCommonConfigListForRegistration($tableName){
+        return DB::table($tableName)
+            ->where('is_active', 1)
+            ->orderBy('weight', 'desc')
+            ->lists('name', 'id');
+    }
+    public function getDivisionsListForRegistration($tableName){
+        return DB::table($tableName)
+            ->lists('name', 'id');
+    }
 }
