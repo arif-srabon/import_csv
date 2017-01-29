@@ -22,7 +22,12 @@ return [
     'select_type'    => 'Select Type',
     'download_guidline'    => 'Guidelines For Import File',
 
-
+    //for grid
+    'btn_printID'=>'Print ID',
+    'btn_print'=>'Print',
+    'btn_edit'=>'Edit',
+    'btn_delete'=>'Delete',
+    //end grid
     'btn_reset'          => 'Reset',
     'btn_save'           => 'Save',
 

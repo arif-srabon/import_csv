@@ -14,7 +14,7 @@ return [
 
     'user_upload_photo_path'     => 'uploads/user/photo/',
     'user_upload_sign_path'     => 'uploads/user/sign/',
-    'medicine_upload_photo_path' => 'uploads/medicine/',
+    'registration_upload_photo_path' => 'uploads/registration/',
     'import_file_path' => 'uploads/importFile/',
 
     //location type

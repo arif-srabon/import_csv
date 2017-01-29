@@ -231,8 +231,12 @@ Route::resource('news', 'Trans\NewsController');
 //    $api->get('complaintscount/{id}', 'App\Http\Controllers\Api\V1\ComplaintController@complaintsCount');
 //});
 //Registration
-Route::get('registration','Trans\RegistrationController@index');
+
 Route::get('registration/create','Trans\RegistrationController@create');
+Route::post('/registration/read','Trans\RegistrationController@read');
+Route::post('/registration/getDepartmentCode','Trans\RegistrationController@getDepartmentCode');
+Route::post('/registration/getAge','Trans\RegistrationController@getAge');
+Route::resource('registration','Trans\RegistrationController');
 // route for import
 Route::get('importfile','Import\ImportController@index');
 Route::post('importfile/store','Import\ImportController@store');

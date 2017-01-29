@@ -27,7 +27,7 @@ CREATE TABLE `access_log` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `access_log` */
 
@@ -66,6 +66,15 @@ insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`
 insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (33,0,1,'127.0.0.1','2017-01-28 14:04:29','2017-01-28 14:06:13','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 14:04:29','2017-01-28 14:06:13');
 insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (34,0,1,'127.0.0.1','2017-01-28 14:06:16',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 14:06:16',NULL);
 insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (35,0,1,'127.0.0.1','2017-01-28 17:26:19',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-28 17:26:19',NULL);
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (36,0,1,'127.0.0.1','2017-01-29 10:42:37','2017-01-29 10:43:03','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-29 10:42:37','2017-01-29 10:43:03');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (37,0,1,'127.0.0.1','2017-01-29 10:49:19','2017-01-29 10:49:25','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-29 10:49:19','2017-01-29 10:49:25');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (38,0,1,'127.0.0.1','2017-01-29 10:49:31','2017-01-29 10:49:35','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-29 10:49:31','2017-01-29 10:49:35');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (39,0,1,'127.0.0.1','2017-01-29 10:49:46','2017-01-29 10:49:50','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-29 10:49:46','2017-01-29 10:49:50');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (40,0,1,'127.0.0.1','2017-01-29 10:49:55','2017-01-29 10:49:59','Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-29 10:49:55','2017-01-29 10:49:59');
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (41,0,1,'127.0.0.1','2017-01-29 10:50:03',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-29 10:50:03',NULL);
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (42,0,1,'127.0.0.1','2017-01-29 12:11:41',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-29 12:11:41',NULL);
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (43,0,1,'127.0.0.1','2017-01-29 15:05:07',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0','2017-01-29 15:05:07',NULL);
+insert  into `access_log`(`id`,`office_id`,`user_id`,`login_ip`,`login_datetime`,`logout_datetime`,`browser_info`,`created_at`,`updated_at`) values (44,0,1,'127.0.0.1','2017-01-29 18:19:46',NULL,'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/56.0.2924.76 Safari/537.36','2017-01-29 18:19:46',NULL);
 
 /*Table structure for table `activations` */
 
@@ -239,6 +248,32 @@ CREATE TABLE `cc_profession` (
 
 insert  into `cc_profession`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'1','Doctor','ডাক্তার',0,0,1,1,1,'2016-08-03 15:17:12','2016-10-06 12:55:31');
 insert  into `cc_profession`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,'2','Pharmacist','ফার্মাসিস্ট',0,0,1,1,1,'2016-08-03 15:17:24','2016-10-06 12:55:45');
+
+/*Table structure for table `cc_religion` */
+
+DROP TABLE IF EXISTS `cc_religion`;
+
+CREATE TABLE `cc_religion` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `code` varchar(50) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `name_bn` varchar(200) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `weight` int(11) DEFAULT NULL,
+  `is_default` tinyint(4) NOT NULL DEFAULT '0',
+  `is_active` tinyint(4) NOT NULL DEFAULT '0',
+  `created_by` bigint(20) unsigned DEFAULT NULL,
+  `updated_by` bigint(20) unsigned DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `cc_religion` */
+
+insert  into `cc_religion`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'11','Muslims','Muslims',3,1,1,NULL,NULL,NULL,NULL);
+insert  into `cc_religion`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,'12','Hindu','Hindu',2,1,1,NULL,NULL,NULL,NULL);
+insert  into `cc_religion`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (3,'13','Christian','Christian',1,1,1,NULL,NULL,NULL,NULL);
+insert  into `cc_religion`(`id`,`code`,`name`,`name_bn`,`weight`,`is_default`,`is_active`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (4,'13','Buddhis','Buddhis',1,1,1,NULL,NULL,NULL,NULL);
 
 /*Table structure for table `common_config_maps` */
 
@@ -814,6 +849,8 @@ insert  into `migrations`(`migration`,`batch`) values ('2016_03_30_090547_create
 insert  into `migrations`(`migration`,`batch`) values ('2016_03_30_091606_create_cc_designation_table',1);
 insert  into `migrations`(`migration`,`batch`) values ('2016_03_30_091842_create_permissions_table',1);
 insert  into `migrations`(`migration`,`batch`) values ('2015_11_26_133824_create_users_table',2);
+insert  into `migrations`(`migration`,`batch`) values ('2017_01_29_153331_create_cc_religion_table',4);
+insert  into `migrations`(`migration`,`batch`) values ('2017_01_29_124910_create_registration_table',5);
 
 /*Table structure for table `news` */
 
@@ -891,7 +928,7 @@ CREATE TABLE `persistences` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `persistences_code_unique` (`code`)
-) ENGINE=InnoDB AUTO_INCREMENT=1797 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=1806 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 /*Data for the table `persistences` */
 
@@ -956,8 +993,59 @@ insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) val
 insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1759,1083,'L2o0NCKaTpEH9LdMVdqHgqPcwUQAL0TM','2016-12-08 11:01:17','2016-12-08 11:01:17');
 insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1760,1083,'Ow19xlM6fVLbv9UpmX6VX8ZpbpgOemYD','2016-12-11 11:06:32','2016-12-11 11:06:32');
 insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1763,1083,'aIt3tDUTJSP6PUjpCnTmUQ4mVH3KJ67N','2016-12-28 10:53:30','2016-12-28 10:53:30');
-insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1795,1,'6e3VDhP1KnrIIxwyY4YkiypTOaXKEufq','2017-01-28 14:06:16','2017-01-28 14:06:16');
-insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1796,1,'X1Zrsax88JIogPQkmEBUgSNkNgmd0Iro','2017-01-28 17:26:18','2017-01-28 17:26:18');
+insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1802,1,'sypMaDouR9KIjQb3La4brDnKAYnE3DRg','2017-01-29 10:50:03','2017-01-29 10:50:03');
+insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1803,1,'13n9uEBGIzzbPeUbqNu6y3iFoKn9dPUZ','2017-01-29 12:11:41','2017-01-29 12:11:41');
+insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1804,1,'AbfJRXrkHYaNAqk7OWMXZmN5WdwAGiAp','2017-01-29 15:05:07','2017-01-29 15:05:07');
+insert  into `persistences`(`id`,`user_id`,`code`,`created_at`,`updated_at`) values (1805,1,'2aOMoKOo5ZexJrv1uDpWvywuDfask68d','2017-01-29 18:19:45','2017-01-29 18:19:45');
+
+/*Table structure for table `registration` */
+
+DROP TABLE IF EXISTS `registration`;
+
+CREATE TABLE `registration` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `department_id` int(10) unsigned NOT NULL,
+  `client_id` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `registration_date` date NOT NULL,
+  `client_name` varchar(255) COLLATE utf8_unicode_ci NOT NULL,
+  `client_name_bn` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mobile` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `email` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `date_of_birth` date NOT NULL,
+  `religion_id` int(10) unsigned NOT NULL,
+  `gender_id` int(10) unsigned NOT NULL,
+  `marital_status_id` int(10) unsigned NOT NULL,
+  `birth_certificate_no` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `father_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `father_phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mother_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `mother_phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `guardian_name` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `guardian_phone` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `national_id_type` enum('Client','Father','Mother','Husband','Guardian') COLLATE utf8_unicode_ci DEFAULT NULL,
+  `national_id` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `client_photo` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` enum('active','inactive') COLLATE utf8_unicode_ci NOT NULL DEFAULT 'active',
+  `house_no` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `village` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `division_id` bigint(20) unsigned NOT NULL,
+  `district_id` bigint(20) unsigned NOT NULL,
+  `upazilla_id` bigint(20) unsigned NOT NULL,
+  `ward` bigint(20) unsigned DEFAULT NULL,
+  `post_code` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
+  `present_address` mediumtext COLLATE utf8_unicode_ci,
+  `created_by` bigint(20) unsigned NOT NULL,
+  `updated_by` bigint(20) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+/*Data for the table `registration` */
+
+insert  into `registration`(`id`,`department_id`,`client_id`,`registration_date`,`client_name`,`client_name_bn`,`mobile`,`email`,`date_of_birth`,`religion_id`,`gender_id`,`marital_status_id`,`birth_certificate_no`,`father_name`,`father_phone`,`mother_name`,`mother_phone`,`guardian_name`,`guardian_phone`,`national_id_type`,`national_id`,`client_photo`,`status`,`house_no`,`village`,`division_id`,`district_id`,`upazilla_id`,`ward`,`post_code`,`present_address`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,1,'UUU-123','2017-01-29','Client Name ( English ) *','Client Name ( Bangla )','01920869772','admin@gmail.com','1991-02-04',1,1,1,'0584555254','Father\'s Name','0584555254','Mother\'s Name','0584555254','Guardian Name ( English )','0584555254','Client','0135467895215689',NULL,'active','House No. *','Village',1,1,766,26,'2546','Present Address, Present Address',1,1,'2017-01-29 15:57:04','2017-01-29 15:57:04');
+insert  into `registration`(`id`,`department_id`,`client_id`,`registration_date`,`client_name`,`client_name_bn`,`mobile`,`email`,`date_of_birth`,`religion_id`,`gender_id`,`marital_status_id`,`birth_certificate_no`,`father_name`,`father_phone`,`mother_name`,`mother_phone`,`guardian_name`,`guardian_phone`,`national_id_type`,`national_id`,`client_photo`,`status`,`house_no`,`village`,`division_id`,`district_id`,`upazilla_id`,`ward`,`post_code`,`present_address`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,1,'UUU-123','2017-01-29','Client Name ( English ) *','Client Name ( Bangla )','01920869772','admin@gmail.com','1991-02-04',1,1,1,'0584555254','Father\'s Name','0584555254','Mother\'s Name','0584555254','Guardian Name ( English )','0584555254','Client','0135467895215689',NULL,'active','House No. *','Village',1,1,766,26,'2546','Present Address, Present Address',1,1,'2017-01-29 16:14:27','2017-01-29 16:14:27');
+insert  into `registration`(`id`,`department_id`,`client_id`,`registration_date`,`client_name`,`client_name_bn`,`mobile`,`email`,`date_of_birth`,`religion_id`,`gender_id`,`marital_status_id`,`birth_certificate_no`,`father_name`,`father_phone`,`mother_name`,`mother_phone`,`guardian_name`,`guardian_phone`,`national_id_type`,`national_id`,`client_photo`,`status`,`house_no`,`village`,`division_id`,`district_id`,`upazilla_id`,`ward`,`post_code`,`present_address`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (3,3,'PPP-23445','2017-01-02','Md. Arif Hossain','Md. Arif Hossain BN','01920869772','admin@gmail.com','2017-01-31',1,2,2,'0584555254','Father\'s Name','0584555254','Mother\'s Name ( English )','0584555254','Guardian Name ( English )','0584555254','Mother','0135467895215689',NULL,'inactive','House No. *','Village',1,1,763,1,'2546','Present Address, Present Address',1,1,'2017-01-29 16:15:53','2017-01-29 16:15:53');
 
 /*Table structure for table `reminders` */
 
@@ -9919,7 +10007,7 @@ CREATE TABLE `users` (
 
 /*Data for the table `users` */
 
-insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'admin','$2y$10$76eQUxQBNnkwggrCZm1ZiuHV0aScyfgsnEcKpXSBFPpLOr.BjTgPe','প্রশাসক','Admin',11,1,'admin@gmail.com','0123456789','','','','','',0,0,'',NULL,NULL,'uploads/user/photo/1/1485587492.jpg',NULL,'','',0,NULL,NULL,NULL,'','','',0,NULL,NULL,NULL,'',1,'{\"manufacturer.uniquenumber.view\":true,\"manufacturer.uniquenumber.add\":true,\"manufacturer.uniquenumber.edit\":true,\"manufacturer.uniquenumber.del\":true,\"transactions.adrreporting.view\":true,\"transactions.adrreporting.add\":true,\"transactions.adrreporting.edit\":true,\"transactions.adrreporting.print\":true,\"transactions.complaint.view\":true,\"transactions.complaint.print\":true,\"transactions.complaint.edit\":true,\"transactions.counterfeit.view\":true,\"transactions.counterfeit.add\":true,\"transactions.counterfeit.edit\":true,\"transactions.counterfeit.del\":true,\"transactions.counterfeit.print\":true,\"transactions.news.view\":true,\"transactions.news.add\":true,\"transactions.news.edit\":true,\"transactions.news.del\":true,\"dss.settings.commonconfig.view\":true,\"dss.settings.commonconfig.add\":true,\"dss.settings.commonconfig.edit\":true,\"dss.settings.commonconfig.del\":true,\"dss.settings.division.view\":true,\"dss.settings.division.add\":true,\"dss.settings.division.edit\":true,\"dss.settings.division.del\":true,\"dss.settings.district.view\":true,\"dss.settings.district.add\":true,\"dss.settings.district.edit\":true,\"dss.settings.district.del\":true,\"dss.settings.thana_upazilla.view\":true,\"dss.settings.thana_upazilla.add\":true,\"dss.settings.thana_upazilla.edit\":true,\"dss.settings.thana_upazilla.del\":true,\"dss.settings.unionward.view\":true,\"dss.settings.unionward.add\":true,\"dss.settings.unionward.edit\":true,\"dss.settings.unionward.del\":true,\"dss.settings.allowance_program.view\":true,\"dss.settings.allowance_program.add\":true,\"dss.settings.allowance_program.edit\":true,\"dss.settings.allowance_program.del\":true,\"settings.manufacturer.view\":true,\"settings.manufacturer.add\":true,\"settings.manufacturer.edit\":true,\"settings.manufacturer.del\":true,\"settings.medicine.view\":true,\"settings.medicine.add\":true,\"settings.medicine.edit\":true,\"settings.medicine.del\":true,\"settings.importfile.view\":true,\"reports.testreport.view\":true,\"dss.security.role.view\":true,\"dss.security.role.add\":true,\"dss.security.role.edit\":true,\"dss.security.role.del\":true,\"dss.security.role.permission\":true,\"dss.security.users.view\":true,\"dss.security.users.add\":true,\"dss.security.users.edit\":true,\"dss.security.users.del\":true,\"dss.security.users.permission\":true,\"web.pages.view\":true}','2017-01-28 17:26:18',NULL,1,'0000-00-00 00:00:00','2017-01-28 17:26:18');
+insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (1,'admin','$2y$10$76eQUxQBNnkwggrCZm1ZiuHV0aScyfgsnEcKpXSBFPpLOr.BjTgPe','প্রশাসক','Admin',11,1,'admin@gmail.com','0123456789','','','','','',0,0,'',NULL,NULL,'uploads/user/photo/1/1485587492.jpg',NULL,'','',0,NULL,NULL,NULL,'','','',0,NULL,NULL,NULL,'',1,'{\"manufacturer.uniquenumber.view\":true,\"manufacturer.uniquenumber.add\":true,\"manufacturer.uniquenumber.edit\":true,\"manufacturer.uniquenumber.del\":true,\"transactions.adrreporting.view\":true,\"transactions.adrreporting.add\":true,\"transactions.adrreporting.edit\":true,\"transactions.adrreporting.print\":true,\"transactions.complaint.view\":true,\"transactions.complaint.print\":true,\"transactions.complaint.edit\":true,\"transactions.counterfeit.view\":true,\"transactions.counterfeit.add\":true,\"transactions.counterfeit.edit\":true,\"transactions.counterfeit.del\":true,\"transactions.counterfeit.print\":true,\"transactions.news.view\":true,\"transactions.news.add\":true,\"transactions.news.edit\":true,\"transactions.news.del\":true,\"dss.settings.commonconfig.view\":true,\"dss.settings.commonconfig.add\":true,\"dss.settings.commonconfig.edit\":true,\"dss.settings.commonconfig.del\":true,\"dss.settings.division.view\":true,\"dss.settings.division.add\":true,\"dss.settings.division.edit\":true,\"dss.settings.division.del\":true,\"dss.settings.district.view\":true,\"dss.settings.district.add\":true,\"dss.settings.district.edit\":true,\"dss.settings.district.del\":true,\"dss.settings.thana_upazilla.view\":true,\"dss.settings.thana_upazilla.add\":true,\"dss.settings.thana_upazilla.edit\":true,\"dss.settings.thana_upazilla.del\":true,\"dss.settings.unionward.view\":true,\"dss.settings.unionward.add\":true,\"dss.settings.unionward.edit\":true,\"dss.settings.unionward.del\":true,\"dss.settings.allowance_program.view\":true,\"dss.settings.allowance_program.add\":true,\"dss.settings.allowance_program.edit\":true,\"dss.settings.allowance_program.del\":true,\"settings.manufacturer.view\":true,\"settings.manufacturer.add\":true,\"settings.manufacturer.edit\":true,\"settings.manufacturer.del\":true,\"settings.medicine.view\":true,\"settings.medicine.add\":true,\"settings.medicine.edit\":true,\"settings.medicine.del\":true,\"settings.importfile.view\":true,\"reports.testreport.view\":true,\"dss.security.role.view\":true,\"dss.security.role.add\":true,\"dss.security.role.edit\":true,\"dss.security.role.del\":true,\"dss.security.role.permission\":true,\"dss.security.users.view\":true,\"dss.security.users.add\":true,\"dss.security.users.edit\":true,\"dss.security.users.del\":true,\"dss.security.users.permission\":true,\"web.pages.view\":true}','2017-01-29 18:19:45',NULL,1,'0000-00-00 00:00:00','2017-01-29 18:19:45');
 insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (2,'arif','$2y$10$almRVWEZAjODFMrWmXgRuOI2XqbBrKP21pivSIoHD3Axuc2XWEiAW','Ariful Islam Srabon','Arifulislalmsrids',19,1,'arif@gmail.com','0125566','Father\'s Name','Mother\'s Name','01920869772','0135467895215689','01224568',1,1,'B+','1991-02-08','2017-01-01','uploads/user/photo/2/1485580961.jpg','uploads/user/sign/2/1485580961.jpg','43','dsfsf',4,35,384,4473,'12456','78','jjjjj',2,7,1,599,'25556',1,NULL,NULL,1,NULL,'2017-01-28 11:22:40','2017-01-28 11:22:41');
 insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (3,'rakib','$2y$10$ZSQZRug2eaz6y2GHb1u7e.IkxgCZSHXMMlqPNDonHR.9q18Zy/9mW','Rakibul Islam Rakib','Rakibul Islam Rakib',18,3,'rakib@gmail.com','0123456789','Father\'s Name','Mother\'s Name','01920869772','0135467895215689','01224568',1,2,'B+','1991-02-08','2017-01-01','uploads/user/photo/3/1485581214.jpg','uploads/user/sign/3/1485581214.jpg','43','Village Permanent',1,4,788,371,'12456','78','Village Present',3,20,190,2584,'25556',1,NULL,NULL,1,1,'2017-01-28 11:26:54','2017-01-28 13:04:54');
 insert  into `users`(`id`,`email`,`password`,`full_name`,`full_name_bn`,`designation_id`,`department_id`,`official_email`,`office_phone`,`father_name`,`mother_name`,`mobile`,`national_id`,`home_phone`,`gender_id`,`marital_status_id`,`blood_group`,`date_of_birth`,`date_of_joining`,`user_photo`,`user_sign`,`permanent_house_road`,`permanent_village`,`permanent_division`,`permanent_district`,`permanent_upzilla`,`permanent_ward`,`permanent_postcode`,`present_house_road`,`present_village`,`present_division`,`present_district`,`present_upzilla`,`present_ward`,`present_postcode`,`status`,`permissions`,`last_login`,`created_by`,`updated_by`,`created_at`,`updated_at`) values (4,'sharif','$2y$10$GuwqTP1ntWmP5B4dH/r82uh2m32BnzuyZqWrWTCc41jGy.CLwtrlK','Shariful Islam','Shariful Islam',18,1,'sharif@gmail.com','0123456789','Father\'s Name','Mother\'s Name','01920869772','0135467895215689','01224568',1,1,'B+','1991-02-08','2017-01-01','uploads/user/photo/4/1485586731.jpg','uploads/user/sign/4/1485586731.jpg','4333','gazipur',3,21,194,2720,'12456','234','gazipur',4,38,407,4841,'000000',1,NULL,NULL,1,1,'2017-01-28 12:58:51','2017-01-28 13:04:27');

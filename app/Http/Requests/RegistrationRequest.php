@@ -24,9 +24,9 @@ class RegistrationRequest extends Request
     public function rules()
     {
         return [
-            'client_id' => 'required|unique_with:jpu_registration,idsc_center_id' . ($this->id == null ? "" : "," . $this->id),
+            'client_id' => 'required',
             'registration_date' => 'required',
-            'client_name' => 'required|min:3|unique_with:jpu_registration,birth_certificate_no' . ($this->id == null ? "" : "," . $this->id),
+            'client_name' => 'required|min:3',
             'date_of_birth' => 'required',
             'gender_id' => 'required',
             'house_no' => 'required',
@@ -35,11 +35,11 @@ class RegistrationRequest extends Request
             'post_code' => 'required',
             'mobile' => 'required|min:11',
             'email' => 'email',
-            'education_qualification_id' => 'required',
-            'professional_id' => 'required',
-            'living_house_id' => 'required',
-            'family_member' => 'numeric',
-            'earning_family_member' => 'numeric',
+//            'education_qualification_id' => 'required',
+//            'professional_id' => 'required',
+//            'living_house_id' => 'required',
+//            'family_member' => 'numeric',
+//            'earning_family_member' => 'numeric',
             'father_name' => 'min:3',
             'husband_name' => 'min:3',
             'mother_name' => 'min:3',
@@ -47,7 +47,7 @@ class RegistrationRequest extends Request
             'village' => 'min:3',
             'main_problem' => 'min:5',
             'expectation' => 'min:5',
-            'national_id' => 'min:13|max:17|unique_with:jpu_registration,client_name,national_id_type' . ($this->id == null ? "" : "," . $this->id),
+            'national_id' => 'min:13|max:17',
             'national_id_type' => 'required_with:national_id',
             'client_photo' => 'image|mimes:png,jpeg'
         ];

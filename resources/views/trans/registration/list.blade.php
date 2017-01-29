@@ -25,16 +25,21 @@
                     e.preventDefault ? e.preventDefault() : e.returnValue = false;
                     var grid = $("#grid_center").data("kendoGrid");
                     var dataItem = grid.dataItem($(e.currentTarget).closest("tr"));
-                    window.location.href = '/user/'+ dataItem.id +'/edit/';
+                    window.location.href = '/registration/'+ dataItem.id +'/edit/';
                 }
 
-                function commandPermission(e) {
+                function commandPrintInfo(e) {
                     e.preventDefault ? e.preventDefault() : e.returnValue = false;
                     var grid = $("#grid_center").data("kendoGrid");
                     var dataItem = grid.dataItem($(e.currentTarget).closest("tr"));
-                    window.location.href = '/userpermission/'+ dataItem.id +'/edit/';
+                    window.location.href = '/registration/'+ dataItem.id +'/printInfo/';
                 }
-
+                function commandPrintID(e) {
+                    e.preventDefault ? e.preventDefault() : e.returnValue = false;
+                    var grid = $("#grid_center").data("kendoGrid");
+                    var dataItem = grid.dataItem($(e.currentTarget).closest("tr"));
+                    window.location.href = '/registration/'+ dataItem.id +'/printID/';
+                }
                 function commandDelete(e) {
                     e.preventDefault ? e.preventDefault() : e.returnValue = false;
                     var grid = $("#grid_center").data("kendoGrid");
@@ -42,7 +47,7 @@
                         var dataItem = grid.dataItem($(e.currentTarget).closest("tr"));
                         $.ajax({
                             type: "POST",
-                            url: "/user/destroy",
+                            url: "/registration/destroy",
                             contentType: "application/json",
                             data: JSON.stringify({id: dataItem.id}),
                         }).done(function(data) {

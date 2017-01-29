@@ -103,7 +103,7 @@
                                 <div class="form-group">
                                     {!! Form::label('date_of_birth', 'Date of Birth *') !!}
                                     <div class="input-group">
-                                        {!! Form::text('date_of_birth', null, ['class' => 'form-control daterange-single daterange-left']) !!}
+                                        {!! Form::text('date_of_birth', null, ['class' => 'form-control date_format']) !!}
                                         <span class="input-group-addon"><i class="icon-calendar22"></i></span>
                                     </div>
                                     @if ($errors->has('date_of_birth'))<p
@@ -123,7 +123,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     {!! Form::label('gender_id', 'Gender *') !!}
-                                    {!! Form::select('gender_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                    {!! Form::select('gender_id', $gender, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                     @if ($errors->has('gender_id'))<p
                                             class="text-danger">{!!$errors->first('gender_id')!!}</p>@endif
                                 </div>
@@ -131,7 +131,7 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     {!! Form::label('marital_status_id', 'Marital Status *') !!}
-                                    {!! Form::select('marital_status_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                    {!! Form::select('marital_status_id', $maritalstatus, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                     @if ($errors->has('marital_status_id'))<p
                                             class="text-danger">{!!$errors->first('marital_status_id')!!}</p>@endif
                                 </div>
@@ -210,7 +210,15 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    {!! Form::label('religion_id', 'Religion') !!}
+                                    {!! Form::select('religion_id', $religionlist, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                    @if ($errors->has('religion_id'))<p
+                                            class="text-danger">{!!$errors->first('religion_id')!!}</p>@endif
+                                </div>
+                            </div>
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     {!! Form::label('national_id_type', 'National ID Type') !!}
                                     {!! Form::select('national_id_type', array('Client' => 'Client', 'Father' => 'Father','Mother'=>'Mother','Husband'=>'Husband','Guardian'=>'Guardian'), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
@@ -329,7 +337,7 @@
                             <div class="col-md-3">
                                 <div class="form-group">
                                     {!! Form::label('division_id', 'Division *') !!}
-                                    {!! Form::select('division_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
+                                    {!! Form::select('division_id', $divisionList, null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
                                     @if ($errors->has('division_id'))<p
                                             class="text-danger">{!!$errors->first('division_id')!!}</p>@endif
                                 </div>
@@ -420,103 +428,103 @@
     </div> <!-- /.panel-heading -->
     <div id="adrrerpoting-group-3" class="panel-collapse collapse in">
         <div class="panel-body">
-            <div class="row">
-                <fieldset>
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {!! Form::label('education_qualification_id', 'Educational Qualification *') !!}
-                                    {!! Form::select('education_qualification_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control','id'=>'EduQualification']) !!}
-                                    @if ($errors->has('education_qualification_id'))<p
-                                            class="text-danger">{!!$errors->first('education_qualification_id')!!}</p>@endif
-                                </div>
-                            </div>
+            {{--<div class="row">--}}
+                {{--<fieldset>--}}
+                    {{--<div class="col-md-6">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<div class="form-group">--}}
+                                    {{--{!! Form::label('education_qualification_id', 'Educational Qualification *') !!}--}}
+                                    {{--{!! Form::select('education_qualification_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control','id'=>'EduQualification']) !!}--}}
+                                    {{--@if ($errors->has('education_qualification_id'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('education_qualification_id')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <div class="col-md-6">
-                                <div style="margin-top:26px;" class="form-group">
-                                    {!! Form::text('education_qualification_others', null, ['placeholder' => 'Fill when Other', 'class' => 'form-control','id'=>'EduOthers']) !!}
-                                    @if ($errors->has('education_qualification_others'))<p
-                                            class="text-danger">{!!$errors->first('education_qualification_others')!!}</p>@endif
-                                </div>
-                            </div>
-                        </div>
+                            {{--<div class="col-md-6">--}}
+                                {{--<div style="margin-top:26px;" class="form-group">--}}
+                                    {{--{!! Form::text('education_qualification_others', null, ['placeholder' => 'Fill when Other', 'class' => 'form-control','id'=>'EduOthers']) !!}--}}
+                                    {{--@if ($errors->has('education_qualification_others'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('education_qualification_others')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {!! Form::label('family_member', 'Number of  Family Members') !!}
-                                    {!! Form::text('family_member', null, ['placeholder' => '', 'class' => 'form-control']) !!}
-                                    @if ($errors->has('family_member'))<p
-                                            class="text-danger">{!!$errors->first('family_member')!!}</p>@endif
-                                </div>
-                            </div>
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<div class="form-group">--}}
+                                    {{--{!! Form::label('family_member', 'Number of  Family Members') !!}--}}
+                                    {{--{!! Form::text('family_member', null, ['placeholder' => '', 'class' => 'form-control']) !!}--}}
+                                    {{--@if ($errors->has('family_member'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('family_member')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {!! Form::label('earning_family_member', 'Number of Earning Members') !!}
-                                    {!! Form::text('earning_family_member', null, ['placeholder' => '', 'class' => 'form-control']) !!}
-                                    @if ($errors->has('earning_family_member'))<p
-                                            class="text-danger">{!!$errors->first('earning_family_member')!!}</p>@endif
-                                </div>
-                            </div>
-                        </div>
+                            {{--<div class="col-md-6">--}}
+                                {{--<div class="form-group">--}}
+                                    {{--{!! Form::label('earning_family_member', 'Number of Earning Members') !!}--}}
+                                    {{--{!! Form::text('earning_family_member', null, ['placeholder' => '', 'class' => 'form-control']) !!}--}}
+                                    {{--@if ($errors->has('earning_family_member'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('earning_family_member')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {!! Form::label('family_monthly_income_id', 'Monthly Income of the Family') !!}
-                                    {!! Form::select('family_monthly_income_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}
-                                    @if ($errors->has('family_monthly_income_id'))<p
-                                            class="text-danger">{!!$errors->first('family_monthly_income_id')!!}</p>@endif
-                                </div>
-                            </div>
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<div class="form-group">--}}
+                                    {{--{!! Form::label('family_monthly_income_id', 'Monthly Income of the Family') !!}--}}
+                                    {{--{!! Form::select('family_monthly_income_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control']) !!}--}}
+                                    {{--@if ($errors->has('family_monthly_income_id'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('family_monthly_income_id')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                        </div>
-                    </div>
+                        {{--</div>--}}
+                    {{--</div>--}}
 
-                    <div class="col-md-6">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {!! Form::label('professional_id', 'Profession / Occupation *') !!}
-                                    {!! Form::select('professional_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control','id'=>'profession']) !!}
-                                    @if ($errors->has('professional_id'))<p
-                                            class="text-danger">{!!$errors->first('professional_id')!!}</p>@endif
-                                </div>
-                            </div>
+                    {{--<div class="col-md-6">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<div class="form-group">--}}
+                                    {{--{!! Form::label('professional_id', 'Profession / Occupation *') !!}--}}
+                                    {{--{!! Form::select('professional_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control','id'=>'profession']) !!}--}}
+                                    {{--@if ($errors->has('professional_id'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('professional_id')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                            <div class="col-md-6">
-                                <div style="margin-top:26px;" class="form-group">
-                                    {!! Form::text('professional_others', null, ['placeholder' => 'Fill when Other', 'class' => 'form-control','id'=>'professionOther']) !!}
-                                    @if ($errors->has('professional_others'))<p
-                                            class="text-danger">{!!$errors->first('education_qualification_others')!!}</p>@endif
-                                </div>
-                            </div>
-                        </div>
+                            {{--<div class="col-md-6">--}}
+                                {{--<div style="margin-top:26px;" class="form-group">--}}
+                                    {{--{!! Form::text('professional_others', null, ['placeholder' => 'Fill when Other', 'class' => 'form-control','id'=>'professionOther']) !!}--}}
+                                    {{--@if ($errors->has('professional_others'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('education_qualification_others')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    {!! Form::label('living_house_id', 'Type of House Living in *') !!}
-                                    {!! Form::select('living_house_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control','id'=>'houseLivingType']) !!}
-                                    @if ($errors->has('living_house_id'))<p
-                                            class="text-danger">{!!$errors->first('living_house_id')!!}</p>@endif
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div style="margin-top:26px;" class="form-group">
-                                    {!! Form::text('living_house_others', null, ['placeholder' => 'Fill when Other', 'class' => 'form-control','id'=>'houseLivingTypeOther']) !!}
-                                    @if ($errors->has('living_house_others'))<p
-                                            class="text-danger">{!!$errors->first('living_house_others')!!}</p>@endif
-                                </div>
-                            </div>
-                        </div>
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<div class="form-group">--}}
+                                    {{--{!! Form::label('living_house_id', 'Type of House Living in *') !!}--}}
+                                    {{--{!! Form::select('living_house_id', array(), null, ['placeholder' => 'Select', 'class' => 'select form-control','id'=>'houseLivingType']) !!}--}}
+                                    {{--@if ($errors->has('living_house_id'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('living_house_id')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-6">--}}
+                                {{--<div style="margin-top:26px;" class="form-group">--}}
+                                    {{--{!! Form::text('living_house_others', null, ['placeholder' => 'Fill when Other', 'class' => 'form-control','id'=>'houseLivingTypeOther']) !!}--}}
+                                    {{--@if ($errors->has('living_house_others'))<p--}}
+                                            {{--class="text-danger">{!!$errors->first('living_house_others')!!}</p>@endif--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
 
-                    </div>
-                </fieldset>
-            </div>
+                    {{--</div>--}}
+                {{--</fieldset>--}}
+            {{--</div>--}}
         </div> <!-- /.panel-body -->
     </div>
 </div> <!-- /.panel panel-flat -->
@@ -580,9 +588,32 @@
         });
     });
     $(document).ready(function () {
-
-
+        $('#age').on('focus', function () {
+            var dob = $('#date_of_birth').val();
+            $.ajax({
+                type: "POST",
+                url: "/registration/getAge",
+                contentType: "application/json",
+                data: JSON.stringify({date: dob}),
+                cache: false
+            }).done(function (data) {
+                $('#age').val(data);
+                //console.log(html)
+            });
+        });
     });
 
-
+    $('#department_id').on('change', function () {
+        var dpetID = $('#department_id').val();
+        var data = 'dpetID=' + dpetID ;
+        $.ajax({
+            type: "POST",
+            url: "/registration/getDepartmentCode",
+            data: data,
+            cache: false
+        }).done(function (data) {
+            $('#prefixId').val(data);
+            //console.log(html)
+        });
+    });
 </script>

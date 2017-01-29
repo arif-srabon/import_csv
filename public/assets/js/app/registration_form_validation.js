@@ -27,19 +27,19 @@ $(function () {
         fileButtonHtml: '<i class="icon-googleplus5"></i>'
     });
 
-    $('.daterange-single').daterangepicker({
-        autoUpdateInput: false,
-        singleDatePicker: true,
-        "autoApply": true,
-        locale: {
-            cancelLabel: 'Clear',
-            format: 'DD-MM-YYYY'
-        }
-    });
-
-    $('.daterange-single').on('apply.daterangepicker', function (ev, picker) {
-        $(this).val(picker.startDate.format('DD-MM-YYYY'));
-    });
+    //$('.daterange-single').daterangepicker({
+    //    autoUpdateInput: false,
+    //    singleDatePicker: true,
+    //    "autoApply": true,
+    //    locale: {
+    //        cancelLabel: 'Clear',
+    //        format: 'DD-MM-YYYY'
+    //    }
+    //});
+    //
+    //$('.daterange-single').on('apply.daterangepicker', function (ev, picker) {
+    //    $(this).val(picker.startDate.format('DD-MM-YYYY'));
+    //});
 
 
     //load comboBox value
